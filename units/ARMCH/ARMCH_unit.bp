@@ -153,9 +153,11 @@ UnitBlueprint {
             RULEUCC_Repair = true,
             RULEUCC_Stop = true,
         },
+        ConstructionBar = true,
+        SelectionPriority = 3,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Advanced',
-	UnitName = 'Construction Hovercraft',
+        UnitName = 'Construction Hovercraft',
     },
     Intel = {
         VisionRadius = 17,

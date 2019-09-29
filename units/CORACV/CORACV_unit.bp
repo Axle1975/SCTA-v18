@@ -140,9 +140,11 @@ UnitBlueprint {
             RULEUCC_Repair = true,
             RULEUCC_Stop = true,
         },
+        ConstructionBar = true,
+        SelectionPriority = 3,
         FactionName = 'CORE',
         TechLevel = 'RULEUTL_Advanced',
-	UnitName = 'Adv. Construction Vehicle',
+        UnitName = 'Adv. Construction Vehicle',
     },
     Intel = {
         VisionRadius = 14,

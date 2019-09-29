@@ -148,8 +148,10 @@ UnitBlueprint {
             RULEUCC_RetaliateToggle = true,
             RULEUCC_Stop = true,
         },
+        ConstructionBar = true,
+        SelectionPriority = 3,
         FactionName = 'ARM',
-	UnitName = 'Decoy Commander',
+        UnitName = 'Decoy Commander',
         TechLevel = 'RULEUTL_Advanced',
     },
     Intel = {

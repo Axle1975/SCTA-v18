@@ -117,6 +117,7 @@ UnitBlueprint {
         ToggleCaps = {
             RULEUTC_IntelToggle = true,
         },
+        SelectionPriority = 5,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Basic',
 	UnitName = 'Radar Tower',

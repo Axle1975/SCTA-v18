@@ -117,6 +117,7 @@ UnitBlueprint {
         CommandCaps = {
             RULEUCC_Transport = true,
         },
+        SelectionPriority = 5,
         FactionName = 'CORE',
         TechLevel = 'RULEUTL_Secret',
         UnitName = 'Air Repair Pad',

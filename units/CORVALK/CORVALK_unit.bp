@@ -135,6 +135,7 @@ UnitBlueprint {
             RULEUCC_Ferry = true,
             RULEUCC_Transport = true,
         },
+        SelectionPriority = 2,
         FactionName = 'CORE',
         TechLevel = 'RULEUTL_Basic',
         UnitName = 'Valkyrie',

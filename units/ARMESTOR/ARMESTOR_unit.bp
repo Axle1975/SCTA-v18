@@ -90,6 +90,7 @@ UnitBlueprint {
 	BuildAngle = 4096,
         Category = 'Economy',
         Classification = 'RULEUC_Resource',
+        SelectionPriority = 5,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Basic',
         UnitName = 'Energy Storage',

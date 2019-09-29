@@ -101,6 +101,7 @@ UnitBlueprint {
             RULEUCC_Stop = true,
             RULEUCC_RetaliateToggle = true,
         },
+        SelectionPriority = 5,
         FactionName = 'CORE',
         TechLevel = 'RULEUTL_Secret',
         UnitName = 'Fortitude Missile Defense',

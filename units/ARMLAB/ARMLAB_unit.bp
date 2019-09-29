@@ -160,6 +160,8 @@ UnitBlueprint {
             RULEUCC_RetaliateToggle = true,
             RULEUCC_Stop = true,
         },
+        SelectionPriority = 5,
+        ConstructionBar = true,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Basic',
 	UnitName = 'Kbot Lab',

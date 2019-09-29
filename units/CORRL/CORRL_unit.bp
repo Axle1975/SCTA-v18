@@ -94,6 +94,7 @@ UnitBlueprint {
             RULEUCC_RetaliateToggle = true,
             RULEUCC_Stop = true,
         },
+        SelectionPriority = 5,
         FactionName = 'CORE',
         TechLevel = 'RULEUTL_Advanced',
         UnitName = 'Pulverizer',

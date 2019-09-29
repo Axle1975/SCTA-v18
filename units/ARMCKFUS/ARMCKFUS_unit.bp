@@ -92,6 +92,7 @@ UnitBlueprint {
 	ToggleCaps = {
 		RULEUTC_CloakToggle = true,
 	},
+        SelectionPriority = 5,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Secret',
 	UnitName = 'Cloakable Fusion Reactor',

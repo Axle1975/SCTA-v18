@@ -103,6 +103,7 @@ UnitBlueprint {
             RULEUCC_Nuke = true,
             RULEUCC_RetaliateToggle = true,
         },
+        SelectionPriority = 5,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Secret',
         UnitName = 'Retaliator',

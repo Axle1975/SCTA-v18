@@ -138,6 +138,8 @@ UnitBlueprint {
             RULEUCC_RetaliateToggle = true,
             RULEUCC_Stop = true,
         },
+        ConstructionBar = true,
+        SelectionPriority = 5,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Basic',
 	UnitName = 'Aircraft Plant',

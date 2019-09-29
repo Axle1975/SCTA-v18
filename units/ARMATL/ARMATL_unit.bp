@@ -104,6 +104,7 @@ UnitBlueprint {
             RULEUCC_RetaliateToggle = true,
             RULEUCC_Stop = true,
         },
+        SelectionPriority = 2,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Secret',
         UnitName = 'Advanced Torpedo Launcher',

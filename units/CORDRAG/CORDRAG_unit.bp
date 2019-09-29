@@ -75,6 +75,7 @@ UnitBlueprint {
         CapCost = 0,
         Category = 'Defense',
         Classification = 'RULEUC_MiscSupport',
+        SelectionPriority = 5,
         FactionName = 'CORE',
         TechLevel = 'RULEUTL_Advanced',
         UnitName = 'Dragons Teeth',

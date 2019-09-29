@@ -104,6 +104,7 @@ UnitBlueprint {
 	BuildAngle = 1024,
         Category = 'Economy',
         Classification = 'RULEUC_Resource',
+        SelectionPriority = 5,
         FactionName = 'CORE',
         TechLevel = 'RULEUTL_Basic',
         UnitName = 'Wind Generator',

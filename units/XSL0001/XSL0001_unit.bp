@@ -183,11 +183,12 @@ UnitBlueprint {
             RULEUCC_RetaliateToggle = true,
             RULEUCC_Stop = true,
         },
-	ToggleCaps = {
-		RULEUTC_CloakToggle = true,
-	},
+        ToggleCaps = {
+            RULEUTC_CloakToggle = true,
+        },
+        SelectionPriority = 3,
         FactionName = 'CORE',
-	UnitName = 'Commander',
+        UnitName = 'Commander',
         QuickSelectPriority = 1,
         TechLevel = 'RULEUTL_Experimental',
     },

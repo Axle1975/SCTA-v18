@@ -147,9 +147,11 @@ UnitBlueprint {
             RULEUCC_Repair = true,
             RULEUCC_Stop = true,
         },
+        ConstructionBar = true,
+        SelectionPriority = 3,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Advanced',
-	UnitName = 'Advanced Construction Sub',
+        UnitName = 'Advanced Construction Sub',
     },
     Intel = {
         VisionRadius = 8,

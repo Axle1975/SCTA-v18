@@ -146,9 +146,11 @@ UnitBlueprint {
             RULEUCC_Repair = true,
             RULEUCC_Stop = true,
         },
+        ConstructionBar = true,
+        SelectionPriority = 3,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Basic',
-	UnitName = 'Construction Kbot',
+        UnitName = 'Construction Kbot',
     },
     Intel = {
         VisionRadius = 15,

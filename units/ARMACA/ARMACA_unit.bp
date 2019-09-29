@@ -152,6 +152,8 @@ UnitBlueprint {
             RULEUCC_Repair = true,
             RULEUCC_Stop = true,
         },
+        ConstructionBar = true,
+        SelectionPriority = 3,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Advanced',
         UnitName = 'Adv. Construction Aircraft',

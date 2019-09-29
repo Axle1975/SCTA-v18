@@ -184,12 +184,13 @@ UnitBlueprint {
             RULEUCC_Stop = true,
             RULEUCC_Overcharge = true,
         },
-	ToggleCaps = {
-		RULEUTC_CloakToggle = true,
-	},
-        FactionName = 'ARM',
-	UnitName = 'Commander',
+        ToggleCaps = {
+            RULEUTC_CloakToggle = true,
+        },
         QuickSelectPriority = 1,
+        SelectionPriority = 3,
+        FactionName = 'ARM',
+        UnitName = 'Commander',
         TechLevel = 'RULEUTL_Experimental',
     },
     Intel = {

@@ -115,6 +115,7 @@ UnitBlueprint {
 	BuildAngle = 8192,
         Category = 'Economy',
         Classification = 'RULEUC_Resource',
+        SelectionPriority = 5,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Basic',
         ToggleCaps = {

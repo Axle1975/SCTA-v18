@@ -145,9 +145,11 @@ UnitBlueprint {
             RULEUCC_Repair = true,
             RULEUCC_Stop = true,
         },
+        ConstructionBar = true,
+        SelectionPriority = 3,
         FactionName = 'CORE',
         TechLevel = 'RULEUTL_Basic',
-	UnitName = 'Construction Ship',
+        UnitName = 'Construction Ship',
     },
     Intel = {
         VisionRadius = 14,

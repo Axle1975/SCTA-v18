@@ -102,6 +102,7 @@ UnitBlueprint {
             RULEUCC_Stop = true,
             RULEUCC_RetaliateToggle = true,
         },
+        SelectionPriority = 5,
         FactionName = 'ARM',
         TechLevel = 'RULEUTL_Secret',
         UnitName = 'Protector',
