@@ -63,15 +63,15 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {0, 'cranetop','clamp1','clamp2','clamp3','clamp4'},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 			{
 				EmitterBone = {'arm1a','arm2a','arm3a',arm4a},
 				EmitterBlueprint = {
-    					'/effects/emitters/terran_missile_hit_01_emit.bp',
-			    		'/effects/emitters/terran_missile_hit_03_emit.bp',
-    					'/effects/emitters/terran_missile_hit_04_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
+			    		'/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
 				},
 				EmitterSize = 0.35,
 			},
@@ -85,7 +85,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },

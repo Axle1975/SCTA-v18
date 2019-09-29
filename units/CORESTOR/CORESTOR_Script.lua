@@ -3,7 +3,7 @@
 #
 #Blueprint created by Raevn
 
-local TAunit = import('/lua/TAunit.lua').TAunit
+local TAunit = import('/mods/SCTA/lua/TAunit.lua').TAunit
 
 CORESTOR = Class(TAunit) {
 }

@@ -54,14 +54,14 @@ UnitBlueprint {
 			{
 				EmitterBone = {0},
 				EmitterBlueprint = {
-					'/effects/emitters/terran_missile_hit_01_emit.bp'
+					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp'
 				},
 				EmitterSize = 15,
 			},
 			{
 				EmitterBone = {0},
 				EmitterBlueprint = {
-					'/effects/emitters/COMBOOM_emit.bp',
+					'/mods/SCTA/effects/emitters/COMBOOM_emit.bp',
 				},
 				EmitterSize = 1.35,
 			},
@@ -73,7 +73,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -150,7 +150,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
 	    MuzzleVelocity = 1,
-	    ProjectileId = '/projectiles/ARMMINE6/ARMMINE6_proj.bp',
+	    ProjectileId = '/mods/SCTA/projectiles/ARMMINE6/ARMMINE6_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {

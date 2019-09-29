@@ -1,6 +1,6 @@
 local Prop = import('/lua/sim/Prop.lua').Prop
-#local WreckShield = import('/lua/TAshield.lua').WreckShield
-local TAutils = import('/lua/TAutils.lua')
+#local WreckShield = import('/mods/SCTA/lua/TAshield.lua').WreckShield
+local TAutils = import('/mods/SCTA/lua/TAutils.lua')
 
 TAWreckage = Class(Prop) {
 	smokeEmitter = nil,
@@ -14,7 +14,7 @@ TAWreckage = Class(Prop) {
 		ForkThread(self.SinkThread, self)
 		if self:GetPosition().y >= GetSurfaceHeight(self:GetPosition().x, self:GetPosition().z) then
 			if not EntityCategoryContains(categories.NOSMOKE, self) then
-				self.smokeEmitter = CreateAttachedEmitter(self, 0, -1, '/effects/emitters/wreckage_smoke_emit.bp' )
+				self.smokeEmitter = CreateAttachedEmitter(self, 0, -1, '/mods/SCTA/effects/emitters/wreckage_smoke_emit.bp' )
 			end
 		end
 	end,

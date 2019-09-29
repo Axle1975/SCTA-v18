@@ -38,7 +38,7 @@ ProjectileBlueprint {
 	'ANTIMISSILE',
     },
     Display = {
-        MeshBlueprint = '/meshes/projectiles/amdrocket_mesh.bp',
+        MeshBlueprint = '/mods/SCTA/meshes/projectiles/amdrocket_mesh.bp',
         StrategicIconSize = 1,
         UniformScale = 0.16,
     },
@@ -74,5 +74,5 @@ ProjectileBlueprint {
         VelocityAlign = true,
     	HitAssignedTarget = true,
     },
-    StrategicIconName = '/textures/ui/common/game/strategicicons/projectiles/icon_strategic_antinuke.dds',
+    StrategicIconName = '/mods/SCTA/textures/ui/common/game/strategicicons/projectiles/icon_strategic_antinuke.dds',
 }

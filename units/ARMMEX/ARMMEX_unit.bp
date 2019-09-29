@@ -66,22 +66,22 @@ UnitBlueprint {
 		DefaultProjectileCategories = {'CamoflageC','Noise3'},
 		DestructionProjectiles = {
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMMEX_debris01_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMMEX_debris01_proj.bp',
 				Bone = 'Extractor',
 			},
 		},
 		DestructionEmitters = {
 			{
 				EmitterBone = {0},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 			{
 				EmitterBone = {'Extractor'},
 				EmitterBlueprint = {
-    					'/effects/emitters/terran_missile_hit_01_emit.bp',
-			    		'/effects/emitters/terran_missile_hit_03_emit.bp',
-    					'/effects/emitters/terran_missile_hit_04_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
+			    		'/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
 				},
 				EmitterSize = 0.35,
 			},
@@ -93,7 +93,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -165,7 +165,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMMEX/ARMMEX_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMMEX/ARMMEX_dead_prop.bp',
         WreckageLayers = {
             Land = true,
         },

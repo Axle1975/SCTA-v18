@@ -1,4 +1,4 @@
-local TADebris = import('/lua/TADebris.lua').TADebris
+local TADebris = import('/mods/SCTA/lua/TADebris.lua').TADebris
 
 Stone01 = Class(TADebris) {
 }

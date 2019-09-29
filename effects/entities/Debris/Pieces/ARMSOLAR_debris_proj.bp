@@ -10,7 +10,7 @@ ProjectileBlueprint {
 				ShaderName = 'TMeshNoLighting',
 				AlbedoName = '/units/ARMSOLAR/ARMSOLAR_Albedo.dds',
 				SpecularName = '/units/ARMSOLAR/ARMSOLAR_SpecTeam.dds',
-				MeshName = '/meshes/projectiles/Debris/ARMSOLAR_debris_lod0.scm',
+				MeshName = '/mods/SCTA/meshes/projectiles/Debris/ARMSOLAR_debris_lod0.scm',
 				LODCutoff = 500,
 			},
 		},

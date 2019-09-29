@@ -11,7 +11,7 @@ ProjectileBlueprint {
     },
     Display = {
 	#Better way of doing this?
-        MeshBlueprint = '/meshes/projectiles/Plasma_mesh.bp',
+        MeshBlueprint = '/mods/SCTA/meshes/projectiles/Plasma_mesh.bp',
         UniformScale = 0,
         StrategicIconSize = 1,
     },

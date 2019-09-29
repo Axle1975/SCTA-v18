@@ -3,9 +3,9 @@
 #
 #Script created by Raevn
 
-local TAunit = import('/lua/TAunit.lua').TAunit
+local TAunit = import('/mods/SCTA/lua/TAunit.lua').TAunit
 local DefaultWeapon = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
-local TAweapon = import('/lua/TAweapon.lua').TAweapon
+local TAweapon = import('/mods/SCTA/lua/TAweapon.lua').TAweapon
 
 ARMAMD = Class(TAunit) {
 

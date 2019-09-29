@@ -23,8 +23,8 @@ EmitterBlueprint {
 	LowFidelity = true,
 	MedFidelity = true,
 	HighFidelity = true,
-	Texture = [[/textures/particles/wake.dds]],
-	RampTexture = [[/textures/particles/ramp_wake.dds]],
+	Texture = [[/mods/SCTA/textures/particles/wake.dds]],
+	RampTexture = [[/mods/SCTA/textures/particles/ramp_wake.dds]],
 	XDirectionCurve = {
 		XRange = 50.00,
 		Keys = {

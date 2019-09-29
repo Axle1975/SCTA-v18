@@ -64,15 +64,15 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {'Pelvis'},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 			{
 				EmitterBone = {'GunBase'},
 				EmitterBlueprint = {
-    					'/effects/emitters/terran_missile_hit_01_emit.bp',
-			    		'/effects/emitters/terran_missile_hit_03_emit.bp',
-    					'/effects/emitters/terran_missile_hit_04_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
+			    		'/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
 				},
 				EmitterSize = 0.35,
 			},
@@ -84,7 +84,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -177,7 +177,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 28.125,
-            ProjectileId = '/projectiles/CORKBOT_MISSILE/CORKBOT_MISSILE_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/CORKBOT_MISSILE/CORKBOT_MISSILE_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {
@@ -243,7 +243,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/CORCRASH/CORCRASH_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/CORCRASH/CORCRASH_dead_prop.bp',
         WreckageLayers = {
             Land = true,
             Seabed = true,

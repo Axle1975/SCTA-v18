@@ -3,7 +3,7 @@
 #
 #Script created by Raevn
 
-local TANuclearProjectile = import('/lua/TAProjectiles.lua').TANuclearProjectile
+local TANuclearProjectile = import('/mods/SCTA/lua/TAProjectiles.lua').TANuclearProjectile
 
 CRBLMSSL = Class(TANuclearProjectile) {
 	CommanderDamage = 2900,	

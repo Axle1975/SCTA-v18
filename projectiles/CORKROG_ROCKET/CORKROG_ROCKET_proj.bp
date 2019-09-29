@@ -37,7 +37,7 @@ ProjectileBlueprint {
         'ROCKET',
     },
     Display = {
-        MeshBlueprint = '/meshes/projectiles/fmdmisl_mesh.bp',
+        MeshBlueprint = '/mods/SCTA/meshes/projectiles/fmdmisl_mesh.bp',
         StrategicIconSize = 1,
         UniformScale = 0.16,
     },

@@ -90,7 +90,7 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {0},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 		},
@@ -101,7 +101,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -203,7 +203,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0.1,
             MuzzleSalvoSize = 4,
 	    MuzzleVelocity = 28.125,
-            ProjectileId = '/projectiles/VTOL_EMG/VTOL_EMG_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/VTOL_EMG/VTOL_EMG_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {
@@ -254,7 +254,7 @@ UnitBlueprint {
             MaxRadius = 22,
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
-            ProjectileId = '/projectiles/DUMMY/DUMMY_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/DUMMY/DUMMY_proj.bp',
             RackBones = {{MuzzleBones = {}}},
             RackRecoilDistance = 0,
             TargetCheckInterval = 1,

@@ -1,5 +1,5 @@
 local DefaultWeapon = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
-TAutils = import('/lua/TAutils.lua')
+TAutils = import('/mods/SCTA/lua/TAutils.lua')
 
 TAweapon = Class(DefaultWeapon) {
     FxMuzzleFlash = {},

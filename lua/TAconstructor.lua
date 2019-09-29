@@ -1,6 +1,6 @@
-local TAunit = import('/lua/TAunit.lua').TAunit
+local TAunit = import('/mods/SCTA/lua/TAunit.lua').TAunit
 local Unit = import('/lua/sim/Unit.lua').Unit
-local TAutils = import('/lua/TAutils.lua')
+local TAutils = import('/mods/SCTA/lua/TAutils.lua')
 
 TAconstructor = Class(TAunit) {
 	currentState = "closed",
@@ -289,10 +289,10 @@ TAconstructor = Class(TAunit) {
 						local bp
 						if (self.isBuilding == true) then
 							bp = self:GetBlueprint().Display.BuildEmitter or 'nanolathe.bp'
-							CreateEmitterAtBone(self, v, self:GetArmy(), '/effects/emitters/' .. bp ):ScaleEmitter(0.1):SetEmitterCurveParam('LIFETIME_CURVE',time,0)
+							CreateEmitterAtBone(self, v, self:GetArmy(), '/mods/SCTA/effects/emitters/' .. bp ):ScaleEmitter(0.1):SetEmitterCurveParam('LIFETIME_CURVE',time,0)
 						else
 							bp = self:GetBlueprint().Display.ReclaimEmitter or 'reclaimnanolathe.bp'
-							CreateEmitterAtBone(self, v, self:GetArmy(), '/effects/emitters/' .. bp ):ScaleEmitter(0.1):SetEmitterCurveParam('LIFETIME_CURVE',time,0):SetEmitterCurveParam('Z_POSITION_CURVE',distance * 10,0)
+							CreateEmitterAtBone(self, v, self:GetArmy(), '/mods/SCTA/effects/emitters/' .. bp ):ScaleEmitter(0.1):SetEmitterCurveParam('LIFETIME_CURVE',time,0):SetEmitterCurveParam('Z_POSITION_CURVE',distance * 10,0)
 						end
 						
 

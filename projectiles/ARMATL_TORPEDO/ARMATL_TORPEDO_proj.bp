@@ -33,7 +33,7 @@ ProjectileBlueprint {
 	'ANTINAVY',
     },
     Display = {
-        MeshBlueprint = '/meshes/projectiles/AdvTorpedo_mesh.bp', #Change
+        MeshBlueprint = '/mods/SCTA/meshes/projectiles/AdvTorpedo_mesh.bp', #Change
         UniformScale = 0.16,
         StrategicIconSize = 1,
     },

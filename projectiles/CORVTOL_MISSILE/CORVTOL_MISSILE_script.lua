@@ -3,7 +3,7 @@
 #
 #Script created by Raevn
 
-local TAMissileProjectile = import('/lua/TAProjectiles.lua').TAMissileProjectile
+local TAMissileProjectile = import('/mods/SCTA/lua/TAProjectiles.lua').TAMissileProjectile
 
 CORVTOL_MISSILE = Class(TAMissileProjectile) 
 {

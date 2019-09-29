@@ -1,5 +1,5 @@
-#ARM Geothermal Powerplant - Produces Energy
-#ARMGEO
+#CORE Geothermal Powerplant - Produces Energy
+#CORGEO
 #
 #Blueprint created by Raevn
 
@@ -52,7 +52,7 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {0},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 		},
@@ -66,7 +66,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },

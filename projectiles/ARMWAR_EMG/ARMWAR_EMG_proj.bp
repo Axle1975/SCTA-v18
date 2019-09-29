@@ -32,7 +32,7 @@ ProjectileBlueprint {
         'DIRECTFIRE'
     },
     Display = {
-        MeshBlueprint = '/meshes/projectiles/Plasma_mesh.bp',
+        MeshBlueprint = '/mods/SCTA/meshes/projectiles/Plasma_mesh.bp',
         UniformScale = 0.16,
         StrategicIconSize = 1,
     },

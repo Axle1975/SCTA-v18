@@ -12,9 +12,9 @@ PropBlueprint {
             LODs = {
                 {
                     LODCutoff = 500,
-		    NormalName = '/meshes/wrecks/Wreck_NormalsTS.dds',
-		    SpecularName = '/meshes/wrecks/Wreck_SpecTeam.dds',
-		    AlbedoName = '/meshes/wrecks/Wreck_Albedo.dds',
+		    NormalName = '/mods/SCTA/meshes/wrecks/Wreck_NormalsTS.dds',
+		    SpecularName = '/mods/SCTA/meshes/wrecks/Wreck_SpecTeam.dds',
+		    AlbedoName = '/mods/SCTA/meshes/wrecks/Wreck_Albedo.dds',
 		    MeshName = 'ARMZEUS_dead_lod0.scm',
                     ShaderName = 'Unit',
                 },
@@ -42,7 +42,7 @@ PropBlueprint {
 	Blueprint = '/units/ARMZEUS/ARMZEUS_heap_prop.bp',
     },
     ScriptClass = 'TAWreckage',
-    ScriptModule = '/lua/TAWreckage.lua',
+    ScriptModule = '/mods/SCTA/lua/TAWreckage.lua',
     SizeX = 2,
     SizeY = 1.25,
     SizeZ = 2,

@@ -53,7 +53,7 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {'Turret', 0},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 		},
@@ -64,7 +64,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -144,7 +144,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0, 
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 59.375,
-            ProjectileId = '/projectiles/ARMFLAK_GUN/ARMFLAK_GUN_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/ARMFLAK_GUN/ARMFLAK_GUN_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {
@@ -199,7 +199,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMFLAK/ARMFLAK_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMFLAK/ARMFLAK_dead_prop.bp',
         WreckageLayers = {
             Land = true,
         },

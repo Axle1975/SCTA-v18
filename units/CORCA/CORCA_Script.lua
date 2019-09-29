@@ -3,8 +3,8 @@
 #
 #Script created by Raevn
 
-local TAconstructor = import('/lua/TAconstructor.lua').TAconstructor
-local TAutils = import('/lua/TAutils.lua')
+local TAconstructor = import('/mods/SCTA/lua/TAconstructor.lua').TAconstructor
+local TAutils = import('/mods/SCTA/lua/TAutils.lua')
 
 CORCA = Class(TAconstructor) {
 

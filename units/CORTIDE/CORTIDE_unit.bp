@@ -52,7 +52,7 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {0},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 		},
@@ -63,7 +63,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -132,7 +132,7 @@ UnitBlueprint {
 --[[
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/CORTIDE/CORTIDE_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/CORTIDE/CORTIDE_dead_prop.bp',
         WreckageLayers = {
             Water = true,
             Seabed = true,

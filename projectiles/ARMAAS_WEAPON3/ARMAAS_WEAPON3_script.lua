@@ -3,7 +3,7 @@
 #
 #Script created by Raevn
 
-local TAMediumCannonProjectile = import('/lua/TAProjectiles.lua').TAMediumCannonProjectile
+local TAMediumCannonProjectile = import('/mods/SCTA/lua/TAProjectiles.lua').TAMediumCannonProjectile
 
 ARMAAS_WEAPON3 = Class(TAMediumCannonProjectile) {
 	AirDamage = 146,

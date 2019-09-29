@@ -171,7 +171,7 @@ end
 
 
 function CreateDelayedWreckage(self,overkillRatio, bp, completed, pos, orientation, health)
-	local WreckShield = import('/lua/TAshield.lua').WreckShield
+	local WreckShield = import('/mods/SCTA/lua/TAshield.lua').WreckShield
 
 	#see if we can reduce this?
 	while not IsDestroyed(self) do
@@ -194,7 +194,7 @@ function CreateDelayedWreckage(self,overkillRatio, bp, completed, pos, orientati
 		local time = (bp.Wreckage.ReclaimTimeMultiplier or 1) 
 
 		prop:SetMaxReclaimValues(time, time, mass, energy)
-		prop:SetReclaimValues(time, time, mass, energy)
+		--prop:SetReclaimValues(time, time, mass, energy)
 
 		prop.OriginalUnit = self.OriginalUnit or self
 		if pbp.Physics.BlockPath == true then
@@ -228,10 +228,18 @@ end
 wind = {
 	direction = 0,
 	amount = 0,
+    threadStarted = false
 }
 
-function WindChangeCall()
-	worldData = import('/lua/sim/worldData.lua')
+function WindChangeThread()
+
+    if wind.threadStarted then
+        return
+    end
+    wind.threadStarted = true
+    LOG('Started WindChangeThread')
+
+	worldData = import('sim/worldData.lua')
 	if worldData.GetMap().maxWind > 0 then
 		while true do
 

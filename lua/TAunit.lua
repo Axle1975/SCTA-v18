@@ -2,11 +2,11 @@
 local Unit = import('/lua/sim/Unit.lua').Unit
 local explosion = import('/lua/defaultexplosions.lua')
 local scenarioUtils = import('/lua/sim/ScenarioUtilities.lua')
-local TAutils = import('/lua/TAutils.lua')
+local TAutils = import('/mods/SCTA/lua/TAutils.lua')
 local Game = import('/lua/game.lua')
-local util = import('utilities.lua')
-local debrisCat = import('/lua/TAdebrisCategories.lua')
-#local WreckShield = import('/lua/TAshield.lua').WreckShield
+local util = import('/lua/utilities.lua')
+local debrisCat = import('/mods/SCTA/lua/TAdebrisCategories.lua')
+#local WreckShield = import('/mods/SCTA/lua/TAshield.lua').WreckShield
 
 TAunit = Class(Unit) 
 {
@@ -26,7 +26,12 @@ TAunit = Class(Unit)
 	DestructionExplosionWaitDelayMax = 0,
 
 	OnCreate = function(self)
-        	Unit.OnCreate(self)
+        Unit.OnCreate(self)
+
+        if not TAutils.wind.threadStarted then
+            ForkThread(TAutils.WindChangeThread, self)
+        end
+
 		self:SetFireState(2)
 		local bp = self:GetBlueprint()
 		if bp.General.BuildAngle then
@@ -123,13 +128,13 @@ TAunit = Class(Unit)
 		while not IsDestroyed(self) do
 			if self:GetFractionComplete() == 1 then
 				if self:GetHealth()/self:GetMaxHealth() < 0.25 then
-					CreateEmitterAtBone(self, bone, self:GetArmy(), '/effects/emitters/damage_bad_smoke_emit.bp' )
-					CreateEmitterAtBone(self, bone, self:GetArmy(), '/effects/emitters/damage_bad_smoke_emit.bp' )
+					CreateEmitterAtBone(self, bone, self:GetArmy(), '/mods/SCTA/effects/emitters/damage_bad_smoke_emit.bp' )
+					CreateEmitterAtBone(self, bone, self:GetArmy(), '/mods/SCTA/effects/emitters/damage_bad_smoke_emit.bp' )
 				elseif self:GetHealth()/self:GetMaxHealth() < 0.5 then
-					CreateEmitterAtBone(self, bone, self:GetArmy(), '/effects/emitters/damage_smoke_emit.bp' )
-					CreateEmitterAtBone(self, bone, self:GetArmy(), '/effects/emitters/damage_bad_smoke_emit.bp' )
+					CreateEmitterAtBone(self, bone, self:GetArmy(), '/mods/SCTA/effects/emitters/damage_smoke_emit.bp' )
+					CreateEmitterAtBone(self, bone, self:GetArmy(), '/mods/SCTA/effects/emitters/damage_bad_smoke_emit.bp' )
 				elseif self:GetHealth()/self:GetMaxHealth() < 0.75 then
-					CreateEmitterAtBone(self, bone, self:GetArmy(), '/effects/emitters/damage_smoke_emit.bp' )
+					CreateEmitterAtBone(self, bone, self:GetArmy(), '/mods/SCTA/effects/emitters/damage_smoke_emit.bp' )
 				end
 			end
 			WaitSeconds(0.5)
@@ -182,9 +187,9 @@ TAunit = Class(Unit)
 		local bp = self:GetBlueprint()
 		if bp.Display.DestructionEffects then
  			if self:GetFractionComplete() == 1 then
-				if not EntityCategoryContains(categories.NOEXPLOSION, self) then
-					CreateLightParticle( self, 0, self:GetArmy(), bp.Display.DestructionEffects.FlashSize or 20, bp.Display.DestructionEffects.FlashTime or 10, 'ExplosionGlow', 'ramp_ExplosionGlow' )
-				end
+				--if not EntityCategoryContains(categories.NOEXPLOSION, self) then
+				--	CreateLightParticle( self, 0, self:GetArmy(), bp.Display.DestructionEffects.FlashSize or 20, bp.Display.DestructionEffects.FlashTime or 10, 'ExplosionGlow', 'ramp_ExplosionGlow' )
+				--end
 				if bp.Display.DestructionEffects.DestructionEmitters then
 					for k,v in bp.Display.DestructionEffects.DestructionEmitters do
 						for bk,bv in v.EmitterBone do
@@ -209,7 +214,7 @@ TAunit = Class(Unit)
 	    for i = 1, partamounts do
 	        local xpos, ypos, zpos = util.GetRandomOffset( sx, sy, sz, 1)
         	local xdir,ydir,zdir = util.GetRandomOffset( sx, sy, sz, 10)
-        	self:CreateProjectile('/effects/entities/Debris/Flame/DefaultFlameProjectileDebris_proj.bp',xpos,ypos,zpos,xdir,ydir + 5,zdir)
+        	self:CreateProjectile('/mods/SCTA/effects/entities/Debris/Flame/DefaultFlameProjectileDebris_proj.bp',xpos,ypos,zpos,xdir,ydir + 5,zdir)
 	    end
 	    partamounts = util.GetRandomInt( bp.Display.DestructionEffects.DefaultProjectileCountMin or 5, bp.Display.DestructionEffects.DefaultProjectileCountMax or (sx * sz + 4)) 
 		LOG("PartAmounts: ",partamounts)

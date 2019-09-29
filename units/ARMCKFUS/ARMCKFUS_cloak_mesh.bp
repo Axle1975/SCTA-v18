@@ -4,7 +4,7 @@ MeshBlueprint {
         {
             MeshName = 'ARMCKFUS_lod0.scm',
             AlbedoName = 'ARMCKFUS_Albedo.dds',
-            NormalsName = '/textures/common/normalsTS.dds',
+            NormalsName = '/mods/SCTA/textures/common/normalsTS.dds',
             SpecularName = 'ARMCKFUS_Specteam.dds',
             ShaderName = 'TACloak',
             LODCutoff = 500,

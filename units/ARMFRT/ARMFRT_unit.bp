@@ -52,14 +52,14 @@ UnitBlueprint {
 	DestructionEffects = {
 		DestructionProjectiles = {
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMRL_debris01_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMRL_debris01_proj.bp',
 				Bone = 'barrel',
 			},
 		},
 		DestructionEmitters = {
 			{
 				EmitterBone = {0},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 		},
@@ -70,7 +70,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -152,7 +152,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 29.375,
-            ProjectileId = '/projectiles/ARMFRT_MISSILE/ARMFRT_MISSILE_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/ARMFRT_MISSILE/ARMFRT_MISSILE_proj.bp',
             ProjectileLifetime = 1,
 
             RackBones = {
@@ -214,7 +214,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMFRT/ARMFRT_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMFRT/ARMFRT_dead_prop.bp',
         WreckageLayers = {
             Water = true,
         },

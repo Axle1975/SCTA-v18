@@ -67,50 +67,50 @@ UnitBlueprint {
 		DefaultProjectileCategories = {'Noise3','BuildMuzzle','BuildPlate'},
 		DestructionProjectiles = {
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
 				Bone = 'Door_01',
 			},
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
 				Bone = 'Door_02',
 			},
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
 				Bone = 'Door_03',
 			},
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
 				Bone = 'Door_04',
 			},
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
 				Bone = 'Door_01a',
 			},
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
 				Bone = 'Door_02a',
 			},
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
 				Bone = 'Door_03a',
 			},
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMLAB_debris01_proj.bp',
 				Bone = 'Door_04a',
 			},
 		},
 		DestructionEmitters = {
 			{
 				EmitterBone = {'Door_01','Door_02a','Door_03a','Door_04','Stand_01','Stand_02'},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 			{
 				EmitterBone = {'Door_01a','Door_02','Door_03','Door_04a'},
 				EmitterBlueprint = {
-    					'/effects/emitters/terran_missile_hit_01_emit.bp',
-			    		'/effects/emitters/terran_missile_hit_03_emit.bp',
-    					'/effects/emitters/terran_missile_hit_04_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
+			    		'/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
 				},
 				EmitterSize = 0.35,
 			},
@@ -124,7 +124,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -232,7 +232,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMLAB/ARMLAB_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMLAB/ARMLAB_dead_prop.bp',
         WreckageLayers = {
             Land = true,
         },

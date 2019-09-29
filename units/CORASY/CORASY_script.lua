@@ -3,7 +3,7 @@
 #
 #Script created by Raevn
 
-local TAconstructor = import('/lua/TAconstructor.lua').TAconstructor
+local TAconstructor = import('/mods/SCTA/lua/TAconstructor.lua').TAconstructor
 
 CORASY = Class(TAconstructor) {
 	pauseTime = 5,

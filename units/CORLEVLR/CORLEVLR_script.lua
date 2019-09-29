@@ -3,8 +3,8 @@
 #
 #Blueprint created by Raevn
 
-local TAunit = import('/lua/TAunit.lua').TAunit
-local TAweapon = import('/lua/TAweapon.lua').TAweapon
+local TAunit = import('/mods/SCTA/lua/TAunit.lua').TAunit
+local TAweapon = import('/mods/SCTA/lua/TAweapon.lua').TAweapon
 
 CORLEVLR = Class(TAunit) {
 

@@ -92,14 +92,14 @@ UnitBlueprint {
 			{
 				EmitterBone = {0},
 				EmitterBlueprint = {
-					'/effects/emitters/terran_missile_hit_01_emit.bp',
+					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
 				},
 				EmitterSize = 15,
 			},
 			{
 				EmitterBone = {0},
 				EmitterBlueprint = {
-					'/effects/emitters/COMBOOM_emit.bp',
+					'/mods/SCTA/effects/emitters/COMBOOM_emit.bp',
 				},
 				EmitterSize = 1.35,
 			},
@@ -111,7 +111,7 @@ UnitBlueprint {
             LODs = {
                 {
                     LODCutoff = 500,
-		    NormalName = '/textures/common/normalsTS.dds',
+		    NormalName = '/mods/SCTA/textures/common/normalsTS.dds',
 		    SpecularName = '/units/ARMCOM/ARMCOM_SpecTeam.dds',
 		    AlbedoName = '/units/ARMCOM/ARMCOM_Albedo.dds',
                     ShaderName = 'Unit',
@@ -207,7 +207,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 25,
-            ProjectileId = '/projectiles/ARMCOMLASER/ARMCOMLASER_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/ARMCOMLASER/ARMCOMLASER_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {

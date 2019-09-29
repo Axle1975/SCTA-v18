@@ -75,15 +75,15 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {0},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 			{
 				EmitterBone = {'Jammer'},
 				EmitterBlueprint = {
-    					'/effects/emitters/terran_missile_hit_01_emit.bp',
-			    		'/effects/emitters/terran_missile_hit_03_emit.bp',
-    					'/effects/emitters/terran_missile_hit_04_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
+			    		'/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
 				},
 				EmitterSize = 0.35,
 			},
@@ -95,7 +95,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -179,7 +179,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMJAM/ARMJAM_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMJAM/ARMJAM_dead_prop.bp',
         WreckageLayers = {
             Land = true,
             Seabed = true,

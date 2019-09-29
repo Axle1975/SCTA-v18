@@ -3,7 +3,7 @@
 #
 #Script created by Raevn
 
-local TAMediumCannonProjectile = import('/lua/TAProjectiles.lua').TAMediumCannonProjectile
+local TAMediumCannonProjectile = import('/mods/SCTA/lua/TAProjectiles.lua').TAMediumCannonProjectile
 
 ARM_HAM = Class(TAMediumCannonProjectile) {
 }

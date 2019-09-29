@@ -1,5 +1,5 @@
-#ARM Construction Ship - Tech Level 1
-#ARMCS
+#ARM Adv Construction Sbu - Tech Level 2
+#ARMACSUB
 #
 #Blueprint created by Raevn
 
@@ -82,15 +82,15 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {0},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 			{
 				EmitterBone = {'door1','door2'},
 				EmitterBlueprint = {
-    					'/effects/emitters/terran_missile_hit_01_emit.bp',
-			    		'/effects/emitters/terran_missile_hit_03_emit.bp',
-    					'/effects/emitters/terran_missile_hit_04_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
+			    		'/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
 				},
 				EmitterSize = 0.35,
 			},
@@ -103,12 +103,12 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
 	MovementEffects = {
-		Emitter = '/effects/emitters/sub_wake_emit.bp',
+		Emitter = '/mods/SCTA/effects/emitters/sub_wake_emit.bp',
 		Scale = 0.5,
 		Bones = {'Wake_01','Wake_02'},
 	},
@@ -200,7 +200,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMACSUB/ARMACSUB_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMACSUB/ARMACSUB_dead_prop.bp',
         WreckageLayers = {
             Water = true,
 	    Sub = true,

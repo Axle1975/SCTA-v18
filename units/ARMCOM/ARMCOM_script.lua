@@ -3,9 +3,9 @@
 #
 #Script created by Raevn
 
-local TAconstructor = import('/lua/TAconstructor.lua').TAconstructor
-local TAweapon = import('/lua/TAweapon.lua').TAweapon
-local TAutils = import('/lua/TAutils.lua')
+local TAconstructor = import('/mods/SCTA/lua/TAconstructor.lua').TAconstructor
+local TAweapon = import('/mods/SCTA/lua/TAweapon.lua').TAweapon
+local TAutils = import('/mods/SCTA/lua/TAutils.lua')
 local DefaultWeapon = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
 
 ARMCOM = Class(TAconstructor) {

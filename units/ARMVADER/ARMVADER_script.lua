@@ -3,8 +3,8 @@
 #
 #Script created by Raevn
 
-local TAunit = import('/lua/TAunit.lua').TAunit
-local TAweapon = import('/lua/TAweapon.lua').TAweapon
+local TAunit = import('/mods/SCTA/lua/TAunit.lua').TAunit
+local TAweapon = import('/mods/SCTA/lua/TAweapon.lua').TAweapon
 
 ARMVADER = Class(TAunit) {
 	attacked = false,

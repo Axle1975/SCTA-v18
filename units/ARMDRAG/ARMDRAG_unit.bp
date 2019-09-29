@@ -54,7 +54,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -103,7 +103,7 @@ UnitBlueprint {
     StrategicIconSortPriority = 0,
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/meshes/rockteeth/rockteeth_prop.bp',
+        Blueprint = '/mods/SCTA/meshes/rockteeth/rockteeth_prop.bp',
         WreckageLayers = {
             Land = true,
         },

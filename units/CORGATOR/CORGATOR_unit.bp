@@ -59,7 +59,7 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {0},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 		},
@@ -70,7 +70,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -162,7 +162,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
 	    MuzzleVelocity = 25,
-            ProjectileId = '/projectiles/GATOR_LASER/GATOR_LASER_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/GATOR_LASER/GATOR_LASER_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {
@@ -213,7 +213,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/CORGATOR/CORGATOR_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/CORGATOR/CORGATOR_dead_prop.bp',
         WreckageLayers = {
             Land = true,
             Seabed = true,

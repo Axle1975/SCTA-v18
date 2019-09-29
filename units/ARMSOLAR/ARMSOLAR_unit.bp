@@ -58,34 +58,34 @@ UnitBlueprint {
 		DefaultProjectileCategories = {'Stone', 'ArmSolar'},
 		DestructionProjectiles = {
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMSOLAR_debris_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMSOLAR_debris_proj.bp',
 				Bone = 'Dish_01',
 			},
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMSOLAR_debris_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMSOLAR_debris_proj.bp',
 				Bone = 'Dish_02',
 			},
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMSOLAR_debris_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMSOLAR_debris_proj.bp',
 				Bone = 'Dish_03',
 			},
 			{
-				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMSOLAR_debris_proj.bp',
+				ProjectileBlueprint = '/mods/SCTA/effects/entities/Debris/Pieces/ARMSOLAR_debris_proj.bp',
 				Bone = 'Dish_04',
 			},
 		},
 		DestructionEmitters = {
 			{
 				EmitterBone = {0},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 			{
 				EmitterBone = {'Dish_01','Dish_02','Dish_03','Dish_04'},
 				EmitterBlueprint = {
-    					'/effects/emitters/terran_missile_hit_01_emit.bp',
-			    		'/effects/emitters/terran_missile_hit_03_emit.bp',
-    					'/effects/emitters/terran_missile_hit_04_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
+			    		'/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
 				},
 				EmitterSize = 0.35,
 			},
@@ -97,7 +97,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -168,7 +168,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMSOLAR/ARMSOLAR_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMSOLAR/ARMSOLAR_dead_prop.bp',
         WreckageLayers = {
             Land = true,
         },

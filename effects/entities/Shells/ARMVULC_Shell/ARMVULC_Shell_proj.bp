@@ -4,7 +4,7 @@ ProjectileBlueprint {
             Type = 'Small01',
             Scale = 1.0,
         },
-        MeshBlueprint = '/meshes/projectiles/ARMVULC_shell_mesh.bp',
+        MeshBlueprint = '/mods/SCTA/meshes/projectiles/ARMVULC_shell_mesh.bp',
         UniformScale = 0.16,
     },
     Physics = {

@@ -3,8 +3,8 @@
 #
 #Script created by Raevn
 
-local TAunit = import('/lua/TAunit.lua').TAunit
-local worldData = import('/lua/sim/worldData.lua')
+local TAunit = import('/mods/SCTA/lua/TAunit.lua').TAunit
+local worldData = import('/mods/SCTA/lua/sim/worldData.lua')
 
 ARMWIN = Class(TAunit) {
 	OnCreate = function(self)

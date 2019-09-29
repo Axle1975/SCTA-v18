@@ -58,7 +58,7 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {'Turret'},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 		},
@@ -69,17 +69,17 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
 	IdleEffects = {
-		Emitter = '/effects/emitters/hover_wake_emit.bp',
+		Emitter = '/mods/SCTA/effects/emitters/hover_wake_emit.bp',
 		Scale = 0.5,
 		Bones = {'Wake_01','Wake_02','Wake_03','Wake_04'},
 	},
 	MovementEffects = {
-		Emitter = '/effects/emitters/hover_wake_emit.bp',
+		Emitter = '/mods/SCTA/effects/emitters/hover_wake_emit.bp',
 		Scale = 0.5,
 		Bones = {'Wake_01','Wake_02','Wake_03','Wake_04'},
 	},
@@ -172,7 +172,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 28.125,
-            ProjectileId = '/projectiles/ARMSH_WEAPON/ARMSH_WEAPON_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/ARMSH_WEAPON/ARMSH_WEAPON_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {
@@ -222,7 +222,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMSH/ARMSH_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMSH/ARMSH_dead_prop.bp',
         WreckageLayers = {
             Land = true,
             Water = true,

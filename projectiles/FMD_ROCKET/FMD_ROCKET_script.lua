@@ -4,7 +4,7 @@
 #
 #Projectile created by Raevn
 
-local TAAntiNukeProjectile = import('/lua/TAProjectiles.lua').TAAntiNukeProjectile
+local TAAntiNukeProjectile = import('/mods/SCTA/lua/TAProjectiles.lua').TAAntiNukeProjectile
 
 FMD_ROCKET = Class(TAAntiNukeProjectile) {
 	OnCreate = function(self)

@@ -1,5 +1,5 @@
 #ARM Peewee - Infantry Kbot
-#ARMFLASH
+#ARMPW
 #
 #Blueprint created by Raevn
 
@@ -61,7 +61,7 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {'Torso'},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 		},
@@ -72,7 +72,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -163,7 +163,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0.1,
             MuzzleSalvoSize = 3,
 	    MuzzleVelocity = 18.75,
-            ProjectileId = '/projectiles/EMG/EMG_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/EMG/EMG_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {
@@ -220,7 +220,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMPW/ARMPW_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMPW/ARMPW_dead_prop.bp',
         WreckageLayers = {
             Land = true,
             Seabed = true,

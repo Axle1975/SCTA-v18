@@ -13,9 +13,9 @@ PropBlueprint {
             LODs = {
                 {
                     LODCutoff = 500,
-		    NormalName = '/meshes/wrecks/Wreck_NormalsTS.dds',
-		    SpecularName = '/meshes/wrecks/Wreck_SpecTeam.dds',
-		    AlbedoName = '/meshes/wrecks/Wreck_Albedo.dds',
+		    NormalName = '/mods/SCTA/meshes/wrecks/Wreck_NormalsTS.dds',
+		    SpecularName = '/mods/SCTA/meshes/wrecks/Wreck_SpecTeam.dds',
+		    AlbedoName = '/mods/SCTA/meshes/wrecks/Wreck_Albedo.dds',
 		    MeshName = 'ARMTIDE_dead_lod0.scm',
                     ShaderName = 'Unit',
                 },
@@ -41,7 +41,7 @@ PropBlueprint {
     },
     SeabedOffset = 0.25,
     ScriptClass = 'TAWreckage',
-    ScriptModule = '/lua/TAWreckage.lua',
+    ScriptModule = '/mods/SCTA/lua/TAWreckage.lua',
     SizeX = 3,
     SizeY = 1.25,
     SizeZ = 3,

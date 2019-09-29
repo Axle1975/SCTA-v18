@@ -33,7 +33,7 @@ ProjectileBlueprint {
 	'ANTINAVY',
     },
     Display = {
-        MeshBlueprint = '/meshes/projectiles/DEPTHCHARGE_mesh.bp',
+        MeshBlueprint = '/mods/SCTA/meshes/projectiles/DEPTHCHARGE_mesh.bp',
         UniformScale = 0.16,
         StrategicIconSize = 1,
     },

@@ -3,9 +3,9 @@
 #
 #Script created by Raevn
 
-local TAunit = import('/lua/TAunit.lua').TAunit
+local TAunit = import('/mods/SCTA/lua/TAunit.lua').TAunit
 local ScenarioUtils = import('/lua/sim/ScenarioUtilities.lua')
-local worldData = import('/lua/sim/worldData.lua')
+local worldData = import('/mods/SCTA/lua/sim/worldData.lua')
 
 ARMMEX = Class(TAunit) {
 	onMetalSpot = false,

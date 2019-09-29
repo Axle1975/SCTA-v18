@@ -3,7 +3,7 @@
 #
 #Script created by Raevn
 
-local TAUnderWaterProjectile = import('/lua/TAProjectiles.lua').TAUnderWaterProjectile
+local TAUnderWaterProjectile = import('/mods/SCTA/lua/TAProjectiles.lua').TAUnderWaterProjectile
 
 CORAIR_TORPEDO = Class(TAUnderWaterProjectile) {
 	TrackTime = 10,

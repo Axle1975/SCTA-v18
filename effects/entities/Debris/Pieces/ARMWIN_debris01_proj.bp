@@ -10,7 +10,7 @@ ProjectileBlueprint {
 				ShaderName = 'TMeshNoLighting',
 				AlbedoName = '/units/ARMWIN/ARMWIN_Albedo.dds',
 				SpecularName = '/units/ARMWIN/ARMWIN_SpecTeam.dds',
-				MeshName = '/meshes/projectiles/Debris/ARMWIN_debris01_lod0.scm',
+				MeshName = '/mods/SCTA/meshes/projectiles/Debris/ARMWIN_debris01_lod0.scm',
 				LODCutoff = 500,
 			},
 		},

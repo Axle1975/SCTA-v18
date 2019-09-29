@@ -3,7 +3,7 @@
 #
 #Script created by Raevn
 
-local TALightCannonProjectile = import('/lua/TAProjectiles.lua').TALightCannonProjectile
+local TALightCannonProjectile = import('/mods/SCTA/lua/TAProjectiles.lua').TALightCannonProjectile
 
 ARM_LIGHTCANNON = Class(TALightCannonProjectile) {
 }

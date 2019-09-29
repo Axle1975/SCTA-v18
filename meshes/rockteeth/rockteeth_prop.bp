@@ -13,7 +13,7 @@ PropBlueprint {
             LODs = {
                 {
                     LODCutoff = 500,
-		    NormalName = '/textures/common/normalsTS.dds',
+		    NormalName = '/mods/SCTA/textures/common/normalsTS.dds',
 		    SpecularName = 'rockteeth_SpecTeam.dds',
 		    AlbedoName = 'rockteeth_Albedo.dds',
 		    MeshName = 'rockteeth_lod0.scm',
@@ -40,7 +40,7 @@ PropBlueprint {
         BlockPath = true,
     },
     ScriptClass = 'TAWreckage',
-    ScriptModule = '/lua/TAWreckage.lua',
+    ScriptModule = '/mods/SCTA/lua/TAWreckage.lua',
     SizeX = 2,
     SizeY = 0.5,
     SizeZ = 2,

@@ -1,5 +1,5 @@
 #ARM Fortification Wall - Perimeter Defence
-#ARMDRAG
+#ARMFORT
 #
 #Blueprint created by Raevn
 
@@ -53,7 +53,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -102,7 +102,7 @@ UnitBlueprint {
     StrategicIconSortPriority = 0,
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMFORT/ARMFORT_heap_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMFORT/ARMFORT_heap_prop.bp',
         WreckageLayers = {
             Land = true,
         },

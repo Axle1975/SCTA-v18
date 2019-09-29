@@ -66,15 +66,15 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {0, 'Turret'},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 			{
 				EmitterBone = {'Leg1','Leg2','Leg3','Leg4','Leg5','Leg6'},
 				EmitterBlueprint = {
-    					'/effects/emitters/terran_missile_hit_01_emit.bp',
-			    		'/effects/emitters/terran_missile_hit_03_emit.bp',
-    					'/effects/emitters/terran_missile_hit_04_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
+			    		'/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
+    					'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
 				},
 			EmitterSize = 0.35,
 			},
@@ -86,7 +86,7 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -189,7 +189,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 37.5,
-            ProjectileId = '/projectiles/ARM_PARALYZER/ARM_PARALYZER_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/ARM_PARALYZER/ARM_PARALYZER_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {
@@ -245,7 +245,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/ARMSPID/ARMSPID_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/ARMSPID/ARMSPID_dead_prop.bp',
         WreckageLayers = {
             Land = true,
             Seabed = true,

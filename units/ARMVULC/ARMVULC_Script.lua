@@ -3,8 +3,8 @@
 #
 #Script created by Raevn
 
-local TAunit = import('/lua/TAunit.lua').TAunit
-local TAweapon = import('/lua/TAweapon.lua').TAweapon
+local TAunit = import('/mods/SCTA/lua/TAunit.lua').TAunit
+local TAweapon = import('/mods/SCTA/lua/TAweapon.lua').TAweapon
 
 ARMVULC = Class(TAunit) {
 	currentBarrel = 0,
@@ -28,7 +28,7 @@ ARMVULC = Class(TAunit) {
 				if self.unit.currentBarrel == 4 then
 					self.unit.currentBarrel = 0
 				end
-				self.unit:CreateProjectileAtBone('/effects/entities/Shells/ARMVULC_Shell/ARMVULC_Shell_proj.bp','Shell')
+				self.unit:CreateProjectileAtBone('/mods/SCTA/effects/entities/Shells/ARMVULC_Shell/ARMVULC_Shell_proj.bp','Shell')
 			end,
 
     			PlayFxRackReloadSequence = function(self)

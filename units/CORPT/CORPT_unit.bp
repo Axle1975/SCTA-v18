@@ -67,7 +67,7 @@ UnitBlueprint {
 		DestructionEmitters = {
 			{
 				EmitterBone = {'turret'},
-				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
 				EmitterSize = 1.25,
 			},
 		},
@@ -78,12 +78,12 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/textures/common/normalsTS.dds'
+		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
 	MovementEffects = {
-		Emitter = '/effects/emitters/wake_emit.bp',
+		Emitter = '/mods/SCTA/effects/emitters/wake_emit.bp',
 		Scale = 0.5,
 		Bones = {'wake1','wake2'},
 	},
@@ -171,7 +171,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 28.125,
-            ProjectileId = '/projectiles/CORKBOT_MISSILE/CORKBOT_MISSILE_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/CORKBOT_MISSILE/CORKBOT_MISSILE_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {
@@ -228,7 +228,7 @@ UnitBlueprint {
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 25,
-            ProjectileId = '/projectiles/CORPT_LASER/CORPT_LASER_proj.bp',
+            ProjectileId = '/mods/SCTA/projectiles/CORPT_LASER/CORPT_LASER_proj.bp',
             RackBones = {
                 {
                     MuzzleBones = {
@@ -295,7 +295,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/CORPT/CORPT_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/CORPT/CORPT_dead_prop.bp',
         WreckageLayers = {
             Water = true,
 	    Sub = true,

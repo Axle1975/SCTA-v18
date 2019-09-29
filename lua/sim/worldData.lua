@@ -1,6 +1,6 @@
-maps = import('/lua/sim/Worlds.lua').maps
-terrain = import('/lua/sim/Worlds.lua').terrain
-TAutils = import('/lua/TAutils.lua')
+maps = import('Worlds.lua').maps
+terrain = import('Worlds.lua').terrain
+TAutils = import('/mods/SCTA/lua/TAutils.lua')
 
 function GetTerrain()
 	local map = GetMap()
