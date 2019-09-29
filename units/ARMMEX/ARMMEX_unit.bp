@@ -1,0 +1,173 @@
+#ARM Metal Extractor - Extracts Metal
+#ARMMEX
+#
+#Blueprint created by Raevn
+
+UnitBlueprint {
+    Audio = {
+        UISelection = Sound {
+            Bank = 'TA_Sound',
+            Cue = 'MEXON1',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        Activate = Sound {
+            Bank = 'TA_Sound',
+            Cue = 'MEXRUN1',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        Deactivate = Sound {
+            Bank = 'TA_Sound',
+            Cue = 'MEXOFF1',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+
+	Destroyed = Sound {
+            Bank = 'TA_Sound',
+            Cue = 'XPLOSML3',
+            LodCutoff = 'UnitMove_LodCutoff',
+	},
+    },
+    BuildIconSortPriority = 4,
+    Categories = {
+        'BUILTBYT1AIR',
+        'BUILTBYT1KBOT',
+        'BUILTBYT1VEHICLE',
+        'BUILTBYT1HOVER',
+        'BUILTBYCOMMANDER',
+        'SELECTABLE',
+        'DRAGBUILD',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'TECH1',
+
+	--Additional Categories
+	'STRUCTURE',
+        'MASSPRODUCTION',
+        'MASSEXTRACTION',
+        'ECONOMIC',
+
+	--TA Categories
+	'ARM',
+	'ENERGY',
+	'LEVEL1',
+	'NOWEAPON',
+	'NOTAIR',
+	'NOTSUB',
+	'STORAGE',
+    },
+    Defense = {
+        ArmorType = 'Normal',
+        Health = 170,
+        MaxHealth = 170,
+    },
+    Description = 'Extracts Metal',
+    Display = {
+	DestructionEffects = {
+		DefaultProjectileCategories = {'CamoflageC','Noise3'},
+		DestructionProjectiles = {
+			{
+				ProjectileBlueprint = '/effects/entities/Debris/Pieces/ARMMEX_debris01_proj.bp',
+				Bone = 'Extractor',
+			},
+		},
+		DestructionEmitters = {
+			{
+				EmitterBone = {0},
+				EmitterBlueprint = {'/effects/emitters/napalm_fire_emit.bp'},
+				EmitterSize = 1.25,
+			},
+			{
+				EmitterBone = {'Extractor'},
+				EmitterBlueprint = {
+    					'/effects/emitters/terran_missile_hit_01_emit.bp',
+			    		'/effects/emitters/terran_missile_hit_03_emit.bp',
+    					'/effects/emitters/terran_missile_hit_04_emit.bp',
+				},
+				EmitterSize = 0.35,
+			},
+		},
+	},
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 500,
+                    ShaderName = 'Unit',
+		    NormalsName = '/textures/common/normalsTS.dds'
+                },
+            },
+        },
+        UniformScale = 0.16,
+    },
+    Economy = {
+        BuildCostEnergy = 521,
+        BuildCostMass = 50,
+        BuildTime = 1800,
+        MaintenanceConsumptionPerSecondEnergy = 3,
+        ProductionPerSecondMass = 2.2,
+    },
+    Footprint = {
+	MaxSlope = 0.625,
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+	BuildAngle = 8192,
+        Category = 'Economy',
+        Classification = 'RULEUC_Resource',
+        FactionName = 'ARM',
+        TechLevel = 'RULEUTL_Basic',
+        ToggleCaps = {
+            RULEUTC_ProductionToggle = true,
+        },
+        UnitName = 'Metal Extractor',
+    },
+    Intel = {
+        VisionRadius = 13,
+    },
+    Interface = {
+        HelpText = 'Extracts Metal',
+    },
+    LifeBarHeight = 0.25,
+    LifeBarOffset = 0.5,
+    LifeBarSize = 2,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        SkirtSizeX = 3,
+        SkirtSizeZ = 3,
+	BuildRestriction = 'RULEUBR_OnMassDeposit',
+    },
+    SelectionSizeX = 1.5,
+    SelectionSizeZ = 1.5,
+    SelectionThickness = 0.25,
+    SizeX = 3,
+    SizeY = 2,
+    SizeZ = 3,
+    StrategicIconName = 'icon_structure1_mass',
+    StrategicIconSortPriority = 0,
+    Weapon = {
+        { #SMALL_BUILDINGEX
+            Damage = 40,
+            DamageFriendly = true,
+            DamageRadius = 6.406,
+            DamageType = 'Normal',
+            DummyWeapon = true,
+            Label = 'DeathWeapon',
+        },
+        { #SMALL_BUILDING
+            Damage = 900,
+            DamageRadius = 6.406,
+            DummyWeapon = true,
+            Label = 'SuicideWeapon',
+        },
+    },
+    Wreckage = {
+	UseCustomMesh = true,
+        Blueprint = '/units/ARMMEX/ARMMEX_dead_prop.bp',
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

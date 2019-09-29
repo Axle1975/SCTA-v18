@@ -1,0 +1,17 @@
+UnitBlueprint {
+    Merge = true,
+    BlueprintId="armcroc", 
+    Footprint = {
+        SizeX = 2,
+        SizeZ = 2,
+    },
+}
+
+UnitBlueprint {
+    Merge = true,
+    BlueprintId="corseal", 
+    Footprint = {
+        SizeX = 2,
+        SizeZ = 2,
+    },
+}
