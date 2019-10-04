@@ -6,7 +6,7 @@ MeshBlueprint {
             AlbedoName = 'ARMCOM_Albedo.dds',
             NormalsName = '/mods/SCTA/textures/common/normalsTS.dds',
             SpecularName = 'ARMCOM_Specteam.dds',
-            ShaderName = 'TACloak',
+            ShaderName = 'CommandFeedback', -- TACloak
             LODCutoff = 500,
         },
     },

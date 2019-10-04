@@ -6,7 +6,7 @@ MeshBlueprint {
             AlbedoName = 'CORMINE2_Albedo.dds',
             NormalsName = '/mods/SCTA/textures/common/normalsTS.dds',
             SpecularName = 'CORMINE2_Specteam.dds',
-            ShaderName = 'TACloak',
+            ShaderName = 'CommandFeedback', -- TACloak
             LODCutoff = 500,
         },
     },
