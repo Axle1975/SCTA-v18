@@ -127,9 +127,10 @@ UnitBlueprint {
         BuildOnLayerCaps = {
             LAYER_Land = true,
         },
+        FlattenSkirt = true,
         SkirtSizeX = 5,
         SkirtSizeZ = 5,
-	BuildRestriction = 'RULEUBR_OnMassDeposit',
+        BuildRestriction = 'RULEUBR_OnMassDeposit',
     },
     SelectionSizeX = 2.5,
     SelectionSizeZ = 2.5,
