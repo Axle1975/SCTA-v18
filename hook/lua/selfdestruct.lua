@@ -1,3 +1,25 @@
+
+function DoSelfDestruct(unit)
+
+    if unit:BeenDestroyed() or unit.Dead then
+        return
+    end
+
+    if EntityCategoryContains(categories.TRANSPORTATION, unit) then
+        local cargo = unit:GetCargo()
+        for k, v in cargo do
+            if unit ~= v then
+                DoSelfDestruct(v)
+            end
+        end
+    end
+
+    FireSelfdestructWeapons(unit)
+    unit.SelfDestructed = true
+    unit:Kill(unit, 'normal', 0)
+end
+
+
 function ToggleSelfDestruct(data)
     -- Suppress self destruct in tutorial missions as they screw up the mission end
     if ScenarioInfo.tutorial and ScenarioInfo.tutorial == true then
@@ -15,11 +37,7 @@ function ToggleSelfDestruct(data)
         if table.getsize(unitEntities) > 0 then
             if data.noDelay then -- Kill these units instantly
                 for _, unit in unitEntities do
-                    if unit:BeenDestroyed() or unit.Dead then return end
-
-                    FireSelfdestructWeapons(unit)
-                    unit.SelfDestructed = true
-                    unit:Kill()
+                    DoSelfDestruct(unit)
                 end
             else
                 local togglingOff = false
@@ -42,19 +60,14 @@ function ToggleSelfDestruct(data)
                         -- Fires weapons with FireOnSelfDestruct = true in units weapon table
                         local bp = unit:GetBlueprint()
                         if bp.General.InstantDeathOnSelfDestruct then
-                            FireSelfdestructWeapons(unit)
-                            unit.SelfDestructed = true
-                            unit:Kill()
+                            DoSelfDestruct(unit)
                         else
                             -- Regular self destruct cycle
                             local entityId = unit:GetEntityId()
                             StartCountdown(entityId)
                             unit.SelfDestructThread = ForkThread(function()
                                 WaitSeconds(5)
-                                if unit:BeenDestroyed() then return end
-                                FireSelfdestructWeapons(unit)
-                                unit.SelfDestructed = true
-                                unit:Kill()
+                                DoSelfDestruct(unit)
                             end)
                         end
                     end
