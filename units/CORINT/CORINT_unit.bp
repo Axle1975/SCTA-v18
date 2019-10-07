@@ -151,7 +151,7 @@ UnitBlueprint {
             FiringTolerance = 1.65,	
 	    FiringRandomness = 0.5,
             Label = 'CORE_INTIMIDATOR',
-            MaxRadius = 320, 
+            MaxRadius = 416,  -- OTA 320, increased due to generally larger supcom map size
             MuzzleSalvoDelay = 0, 
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 62.5,

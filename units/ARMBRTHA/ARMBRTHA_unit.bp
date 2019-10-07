@@ -151,7 +151,7 @@ UnitBlueprint {
             FiringTolerance = 1.65,	
 	    FiringRandomness = 0.5,
             Label = 'ARM_BERTHACANNON',
-            MaxRadius = 256, 
+            MaxRadius = 333,  -- OTA 256, increased due to generally larger supcom map size
             MuzzleSalvoDelay = 0, 
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 50,
