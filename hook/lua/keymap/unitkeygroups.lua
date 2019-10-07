@@ -334,9 +334,9 @@ unitkeygroups = {
         "uab1202",
         "uab1103",
         "armmex",
-        "armmoho",
-        "armuwmex",
         "cormex",
+        "armuwmex",
+        "armmoho",
         "cormoho"
     },
     ["Mass_Fabricator"] = {
