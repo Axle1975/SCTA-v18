@@ -25,6 +25,7 @@ UnitBlueprint {
 
 	--TA Categories
 	'ARM',
+    'CORE', -- in lieu of core walls
 	'METAL',
 	'LEVEL2',
 	'NOWEAPON',

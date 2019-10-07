@@ -34,6 +34,7 @@ UnitBlueprint {
 
 	--TA Categories
 	'ARM',
+    'CORE', -- in lieu of core float hlt
 	'SPECIAL',
 	'LEVEL2',
 	'WEAPON',

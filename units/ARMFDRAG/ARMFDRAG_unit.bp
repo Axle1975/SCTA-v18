@@ -24,6 +24,7 @@ UnitBlueprint {
 
 	--TA Categories
 	'ARM',
+    'CORE', -- in lieu of core floating teeth
 	'LEVEL2',
 	'NOWEAPON',
 	'NOTAIR',

@@ -35,6 +35,7 @@ UnitBlueprint {
 
 	--TA Categories
 	'ARM',
+    'CORE', -- in lieu of buzzsaw
 	'LEVEL3',
 	'STRATEGIC',
 	'WEAPON',

@@ -36,6 +36,7 @@ UnitBlueprint {
 
 	--TA Categories
 	'ARM',
+    'CORE', -- in lieu of core storage
 	'ENERGY',
 	'LEVEL1',
 	'NOWEAPON',

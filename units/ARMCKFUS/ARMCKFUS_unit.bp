@@ -34,6 +34,7 @@ UnitBlueprint {
 
 	--TA Categories
 	'ARM',
+    'CORE', -- in lieu of core cloaker
 	'ENERGY',
 	'LEVEL3',
 	'NOWEAPON',

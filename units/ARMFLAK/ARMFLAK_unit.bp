@@ -35,6 +35,7 @@ UnitBlueprint {
 
 	--TA Categories
 	'ARM',
+    'CORE', -- in lieu of core flakker
 	'LEVEL3',
 	'STRATEGIC',
 	'WEAPON',

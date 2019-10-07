@@ -47,7 +47,7 @@ UnitBlueprint {
 
 	--TA Categories
 	'ARM',
-    'CORE',
+    'CORE', -- in lieu of core uw mex
 	'METAL',
 	'EXTRACTOR',
 	'LEVEL1',
