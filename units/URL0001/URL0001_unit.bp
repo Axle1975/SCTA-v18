@@ -153,7 +153,7 @@ UnitBlueprint {
         BuildableCategory = {
             'BUILTBYCOMMANDER CORE',
         },
-        MaxBuildDistance = 3.75,
+        MaxBuildDistance = 7.5,  -- OTA 3.75
         NaturalProducer = true,
         ProductionPerSecondEnergy = 25,
         ProductionPerSecondMass = 1,
