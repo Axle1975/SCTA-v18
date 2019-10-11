@@ -152,7 +152,7 @@ UnitBlueprint {
             FiringTolerance = 1.65,	
 	    FiringRandomness = 2,
             Label = 'ARMVULC_WEAPON',
-            MaxRadius = 250,  -- OTA 193, increased to 250 due to typically large supcom map size
+            MaxRadius = 193,
             MuzzleSalvoDelay = 0, 
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 50,
