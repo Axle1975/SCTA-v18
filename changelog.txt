@@ -3,9 +3,9 @@ v11
 - add wind data for more maps
 - disable arm/core spawn when aeon/sera is selected so that aeon/sera can be used as an AI opponent
 - reduce mex footprint for compatibility with supcom maps
-- add arm equivalent units to core build menus for many missing arm base units:
+- add arm equivalent units to core build menus for many missing core units:
   underwater storage, underwater mex, cloaking fusion, flak cannon, floating metal maker, dragons teeth, fort walls, buzzsaw
-- increase commader build range by factor of 2 compared to authentic TA
+- increase commander build range by factor of 2 compared to authentic TA
 - self destruct units being carried in a transport when the transport is self destructed (thus enabling aerial roach bombing)
 - revert atlas/valkyrie cruising altitude to authentic TA values (thus enabling effective aerial roach bombing)
 
