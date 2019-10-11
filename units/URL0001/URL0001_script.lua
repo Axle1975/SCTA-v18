@@ -6,6 +6,8 @@
 local TAconstructor = import('/mods/SCTA/lua/TAconstructor.lua').TAconstructor
 local TAweapon = import('/mods/SCTA/lua/TAweapon.lua').TAweapon
 local TAutils = import('/mods/SCTA/lua/TAutils.lua')
+local DefaultWeapon = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
+local EffectTemplate = import('/lua/EffectTemplates.lua')
 
 URL0001 = Class(TAconstructor) {
 	motion = 'Stopped',
