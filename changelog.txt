@@ -1,18 +1,21 @@
 v11
-disable arm/core spawn when aeon/sera is selected so that aeon/sera can be used as an AI opponent
-reduce mex footprint for compatibility with supcom maps
-add arm equivalent units to core build menus for many missing arm base units (eg underwater storage, underwater mex, cloaking fusion, flak cannon, floating metal maker, dragons teeth, fort walls, buzzsaw)
-increase commader build range by factor of 2 compared to authentic TA
-self destruct units being carried in a transport when the transport is self destructed (thus enabling aerial roach bombing)
-revert atlas/valkyrie cruising altitude to authentic TA values (thus enabling effective aerial roach bombing)
+- fix missing import for core commander
+- add wind data for more maps
+- disable arm/core spawn when aeon/sera is selected so that aeon/sera can be used as an AI opponent
+- reduce mex footprint for compatibility with supcom maps
+- add arm equivalent units to core build menus for many missing arm base units:
+  underwater storage, underwater mex, cloaking fusion, flak cannon, floating metal maker, dragons teeth, fort walls, buzzsaw
+- increase commader build range by factor of 2 compared to authentic TA
+- self destruct units being carried in a transport when the transport is self destructed (thus enabling aerial roach bombing)
+- revert atlas/valkyrie cruising altitude to authentic TA values (thus enabling effective aerial roach bombing)
 
 v10
-enable supcom selection priority
-enable FA specific footprint for Commander2x2 and Vehicle3x3 for better formations
-fix crash on cloak
+- enable supcom selection priority
+- enable FA specific footprint for Commander2x2 and Vehicle3x3 for better formations
+- fix crash on cloak
 
 v9
-working with FAF with some features disabled to work as a simple sim mod
+- working with FAF with some features disabled to work as a simple sim mod
 
 v7
-import Raevn's last version
+- import Raevn's last version
