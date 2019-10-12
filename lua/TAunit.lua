@@ -165,12 +165,6 @@ TAunit = Class(Unit)
 			end
 		end
 		Unit.OnKilled(self, instigator, type, overkillRatio)
-
-        if EntityCategoryContains(categories.FACTORY, self) then
-            if self.UnitBeingBuilt and not self.UnitBeingBuilt:IsDead() and self.UnitBeingBuilt:GetFractionComplete() != 1 then
-                self.UnitBeingBuilt:Destroy()
-            end
-        end
 	end,
 
 	CreateWreckage = function( self, overkillRatio )
