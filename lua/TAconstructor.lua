@@ -5,6 +5,7 @@ local TAutils = import('/mods/SCTA/lua/TAutils.lua')
 TAconstructor = Class(TAunit) {
 	currentState = "closed",
 	desiredState = "closed",
+    currentTarget = nil,
 	desiredTarget = nil,
 	order = nil,
 
@@ -23,7 +24,7 @@ TAconstructor = Class(TAunit) {
 		self.animating = true
 		while not IsDestroyed(self) and self.wantStopAnimation == false do
 			if(self.currentState == "rolloff") then
-				self.UnitBeingBuilt = nil
+				self.currentTarget = nil
 				self.countdown = self.countdown - 0.2
 				if (self.countdown <= 0) then
 					self.desiredState = "closed"
@@ -46,38 +47,38 @@ TAconstructor = Class(TAunit) {
 							self.currentState = "closed"
 						end
 					elseif (self.desiredState == "aimed") then
-						if (self.UnitBeingBuilt and not IsDestroyed(self.UnitBeingBuilt)) then
-							self:StopSpin(self.UnitBeingBuilt)
+						if (self.currentTarget and not IsDestroyed(self.currentTarget)) then
+							self:StopSpin(self.currentTarget)
 						end
 						self:RollOff()
-						self.UnitBeingBuilt = self.desiredTarget
+						self.currentTarget = self.desiredTarget
 						self.currentState = "aimed"
 						
-						if (self.UnitBeingBuilt) then
-							self:Aim(self.UnitBeingBuilt)
+						if (self.currentTarget) then
+							self:Aim(self.currentTarget)
 						else
 							self.desiredState = "rolloff"
 						end
 
-						if (IsDestroyed(self.UnitBeingBuilt) == false) then
-							if self.isFactory == true and IsDestroyed(self.UnitBeingBuilt) == false then
+						if (IsDestroyed(self.currentTarget) == false) then
+							if self.isFactory == true and IsDestroyed(self.currentTarget) == false then
 								local bone = self:GetBlueprint().Display.BuildAttachBone or 0
-								self.UnitBeingBuilt:AttachBoneTo(-2, self, bone)
+								self.currentTarget:AttachBoneTo(-2, self, bone)
 							end
-							if self.hideUnit and IsDestroyed(self.UnitBeingBuilt) == false  then
-								self.UnitBeingBuilt:ShowBone(0, true)
+							if self.hideUnit and IsDestroyed(self.currentTarget) == false  then
+								self.currentTarget:ShowBone(0, true)
 								#Need to Show Life Bar here once implemented
 							end
 
 							if (self.isBuilding == true) then
-								self.UnitBeingBuilt:HideFlares()
+								self.currentTarget:HideFlares()
 								self:SetBuildRate(self:GetBlueprint().Economy.BuildRate)
-								TAunit.OnStartBuild(self, self.UnitBeingBuilt, self.order)
+								TAunit.OnStartBuild(self, self.currentTarget, self.order)
 							end
 							if (self.isReclaiming == true) then
 								self:SetReclaimTimeMultiplier(20)
 							end
-							ForkThread(self.Nano, self, self.UnitBeingBuilt)
+							ForkThread(self.Nano, self, self.currentTarget)
 						end
 					end
 				elseif(self.currentState == "aimed" or self.currentState == "rolloff") then
@@ -88,7 +89,7 @@ TAconstructor = Class(TAunit) {
 							self.wantStopAnimation = true
 						end
 					elseif (self.desiredState == "rolloff") then
-						self:StopSpin(self.UnitBeingBuilt)
+						self:StopSpin(self.currentTarget)
 						self:RollOff()
 						self.currentState = "rolloff"
 					end
@@ -100,6 +101,19 @@ TAconstructor = Class(TAunit) {
 		self.animating = false
 		self.wantStopAnimation = false
 	end,
+
+
+    OnKilled = function(self, instigator, type, overkillRatio)
+        #If factory, destory what I'm building if I die
+        TAunit.OnKilled(self, instigator, type, overkillRatio)
+        if self.isFactory then
+            if self.currentTarget and not self.currentTarget:IsDead() and self.currentTarget:GetFractionComplete() != 1 then
+                self.currentTarget:Kill()
+                self.currentTarget:Destroy()
+            end
+        end
+    end,
+
 
 	OnStartBuild = function(self, unitBeingBuilt, order )
 		self:SetBuildRate(0)
