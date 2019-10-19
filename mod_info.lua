@@ -1,6 +1,6 @@
 name = "SCTA"
-uid = "F608E7D6-EC1F-11E9-BACD-018A803E8BF9"
-version = 11
+uid = "66BCB3BC-F22A-11E9-8193-8ECC65B1963E"
+version = 12
 description = "Total Annihilation for Supreme Commander! See where it all began, or take a trip down memory lane. With most ARM units (but not as many for CORE). Choose UEF to spawn an Arm commander, cybran spawn Core. Add an Aeon or Sera AI for an OP opponent. Mod by Raevn, ported to FAForever by Axle"
 author = "Raevn"
 url = ""

@@ -1,3 +1,6 @@
+v12
+- fix for zombie unit-being-built when factory destroyed
+
 v11
 - fix missing import for core commander
 - add wind data for more maps
