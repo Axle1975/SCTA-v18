@@ -1,3 +1,5 @@
+- revert all aircraft cruising altitude to authentic TA values (missile turrets were unable to kill peepers with Raevn's x2 increase)
+
 v12
 - fix for zombie unit-being-built when factory destroyed
 

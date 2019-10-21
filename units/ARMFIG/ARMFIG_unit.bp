@@ -167,7 +167,7 @@ UnitBlueprint {
     LifeBarOffset = 0.5,
     LifeBarSize = 2,
     Physics = {
-        Elevation = 13.75, #6.875,
+        Elevation = 6.875,
         MotionType = 'RULEUMT_Air',
 	BackUpDistance = 0,
 	MaxSpeedReverse = 0,
