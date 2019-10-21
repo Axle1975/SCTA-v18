@@ -1,3 +1,4 @@
+- fix commander regenrate to match authentic TA regen rate
 - revert all aircraft cruising altitude to authentic TA values (missile turrets were unable to kill peepers with Raevn's x2 increase)
 
 v12

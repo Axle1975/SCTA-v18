@@ -100,7 +100,7 @@ UnitBlueprint {
         ArmorType = 'Normal',
         Health = 3000,
         MaxHealth = 3000,
-        RegenRate = 27,
+        RegenRate = 3.7,  # TA HealTime=27, which appears to be 27 units of 30sec
     },
     Description = 'Commander',
     Display = {
