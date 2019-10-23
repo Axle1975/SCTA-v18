@@ -13,9 +13,9 @@ PropBlueprint {
             LODs = {
                 {
                     LODCutoff = 500,
-		    NormalName = '/units/ARMDRAG/ARMDRAG_dead_NormalsTS.dds',
-		    SpecularName = '/units/ARMDRAG/ARMDRAG_dead_SpecTeam.dds',
-		    AlbedoName = '/units/ARMDRAG/ARMDRAG_dead_Albedo.dds',
+		    NormalName = '/mods/SCTA/units/ARMDRAG/ARMDRAG_dead_NormalsTS.dds',
+		    SpecularName = '/mods/SCTA/units/ARMDRAG/ARMDRAG_dead_SpecTeam.dds',
+		    AlbedoName = '/mods/SCTA/units/ARMDRAG/ARMDRAG_dead_Albedo.dds',
 		    MeshName = '/units/ARMDRAG/ARMDRAG_dead_lod0.scm',
                     ShaderName = 'TMeshNoLighting',
                 },

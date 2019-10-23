@@ -8,8 +8,8 @@ ProjectileBlueprint {
 		LODs = {
 			{
 				ShaderName = 'TMeshNoLighting',
-				AlbedoName = '/units/ARMAAP/ARMAAP_Albedo.dds',
-				SpecularName = '/units/ARMAAP/ARMAAP_SpecTeam.dds',
+				AlbedoName = '/mods/SCTA/units/ARMAAP/ARMAAP_Albedo.dds',
+				SpecularName = '/mods/SCTA/units/ARMAAP/ARMAAP_SpecTeam.dds',
 				MeshName = '/mods/SCTA/meshes/projectiles/Debris/ARMAAP_debris01_lod0.scm',
 				LODCutoff = 500,
 			},

@@ -112,8 +112,8 @@ UnitBlueprint {
                 {
                     LODCutoff = 500,
 		    NormalName = '/mods/SCTA/textures/common/normalsTS.dds',
-		    SpecularName = '/units/ARMCOM/ARMCOM_SpecTeam.dds',
-		    AlbedoName = '/units/ARMCOM/ARMCOM_Albedo.dds',
+		    SpecularName = '/mods/SCTA/units/ARMCOM/ARMCOM_SpecTeam.dds',
+		    AlbedoName = '/mods/SCTA/units/ARMCOM/ARMCOM_Albedo.dds',
                     ShaderName = 'Unit',
                 },
             },
