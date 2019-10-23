@@ -43,6 +43,7 @@ UnitBlueprint {
 
 	--TA Categories
         'ARM',
+        'CORE', -- in lieu of core shredder
         'SHIP',
 	'LEVEL2',
 	'WEAPON',

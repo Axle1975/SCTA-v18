@@ -57,6 +57,7 @@ UnitBlueprint {
 
 	--TA Categories
         'ARM',
+        'CORE', -- in lieu of core adv construction sub
 	'UNDERWATER',
 	'LEVEL2',
 	'CONSTR',
