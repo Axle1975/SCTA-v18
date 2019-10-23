@@ -36,6 +36,7 @@ UnitBlueprint {
 	--Additional Categories
         'MOBILE',
 	'NAVAL',
+    'T1SUBMARINE',
 	'ANTINAVY',
 	'NOSMOKE',
         'OVERLAYANTINAVY',
