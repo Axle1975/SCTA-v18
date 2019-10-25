@@ -193,8 +193,7 @@ function CreateDelayedWreckage(self,overkillRatio, bp, completed, pos, orientati
 		#change this to point to the wreckage prop intead of the unit blueprint?
 		local time = (bp.Wreckage.ReclaimTimeMultiplier or 1) 
 
-		prop:SetMaxReclaimValues(time, time, mass, energy)
-		--prop:SetReclaimValues(time, time, mass, energy)
+		prop:SetMaxReclaimValues(time, mass, energy)
 
 		prop.OriginalUnit = self.OriginalUnit or self
 		if pbp.Physics.BlockPath == true then
