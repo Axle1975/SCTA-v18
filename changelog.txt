@@ -1,3 +1,10 @@
+v14
+- fix icon paths in factions.lua
+- adjust bomber release timing due to revert to OTA cruising alitude
+- give core access to arm eagle in lieu of core vulture
+- fix wreckage reclaim values
+- hook factions to fix issues with undefined faction when constructing  user interface for selected units
+
 v13
 - change mod icon to core commander because core commander is boss
 - alternative strategic icons for some units in lieu of being able to load the custom ones in a sim mod
