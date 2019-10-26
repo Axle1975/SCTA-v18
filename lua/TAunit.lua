@@ -156,7 +156,7 @@ TAunit = Class(Unit)
 			for k, weapon in bp.Weapon do
 				#Self Destruct
 				if ((self == instigator and weapon.Label == 'SuicideWeapon') or (self != instigator and weapon.Label == 'DeathWeapon') and type ~= "Reclaimed")then
-					TAutils.DoTaperedAreaDamage(weapon.DamageRadius, weapon.Damage, self:GetPosition(), self, nil, 'Normal', true, false, weapon.EdgeEffectiveness)
+					TAutils.DoTaperedAreaDamage(self, self:GetPosition(), weapon.DamageRadius, weapon.Damage, nil, nil, 'Normal', true, false, weapon.EdgeEffectiveness)
 					if (self == instigator and weapon.Label == 'SuicideWeapon') then
 						self:CreateDebrisProjectiles()
 						self.Suicide = true
