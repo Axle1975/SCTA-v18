@@ -200,7 +200,7 @@ UnitBlueprint {
             BallisticArc = 'RULEUBA_None',
             CollideFriendly = false,
             DamageFriendly = true,
-            Damage = 158, 	
+            Damage = 79, #158, 	
             BombDropThreshold = 3,					
             AlternateDamageRadius = 1.5,
             DamageType = 'Normal',
@@ -209,15 +209,15 @@ UnitBlueprint {
                 Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
             },
-	    RangeCategory = 'UWRC_DirectFire',
-            FiringTolerance = 1,
-	    HeadingArcCenter = 0,
-    	    HeadingArcRange = 5,
+            RangeCategory = 'UWRC_DirectFire',
+            FiringTolerance = 10,
+            HeadingArcCenter = 0,
+            HeadingArcRange = 10,
             Label = 'ARMBOMB',
-            MaxRadius = 35,
-            MuzzleSalvoDelay = 0.18,
+            MaxRadius = 28,
+            MuzzleSalvoDelay = 0.2, -- OTA=0.18
             MuzzleSalvoSize = 4,
-            MuzzleVelocity = 0,	#16.875 - In Projectile
+            MuzzleVelocity = 0, #16.875 - In Projectile
             ProjectileId = '/mods/SCTA/projectiles/ARMBOMB/ARMBOMB_proj.bp',
             RackBones = {
                 {
