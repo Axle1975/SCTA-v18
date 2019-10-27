@@ -9,17 +9,11 @@ function GetDistanceBetweenTwoPoints(x1, z1, x2, z2)
 	return ( distance )
 end
 
-
-function GetDistanceBetweenTwoPoints3(x1, y1, z1, x2, y2, z2)
-	#lol ^ is broken :P
-	local dx = (x2-x1)*(x2 - x1)
-    local dy = (y2-y1)*(y2 - y1)
-	local dz = (z2-z1)*(z2 - z1)
-	local distance = math.sqrt(dx + dy + dz)
-
-	return ( distance )
+function VDist2(u,v)
+    local dx = u.x-v.x
+    local dz = u.z-v.z
+    return math.sqrt(dx*dx + dz*dz)
 end
-
 
 function getUnitChat()
 	return -1
@@ -62,21 +56,44 @@ function GetAngle(x1, z1, x2, z2)
 end
 
 
-function TADamageUnitsInArea(instigator, location, radius, damage, projectile, damageType, damageAllies, damageSelf, taperCoef)
+function CalcDamageTaper(positionEpicentre, positionEntity, radius, edgeEffectiveness)
+    # spherical above, cylindrical below
+
+    local edge = edgeEffectiveness or 0.0
+    local taperCoef = (1.0-edge)/radius
+
+    local dx = positionEpicentre.x - positionEntity.x
+    local dy = positionEpicentre.y - positionEntity.y
+    local dz = positionEpicentre.z - positionEntity.z
+
+    if dy > 0.0 then
+        local r2 = math.sqrt(dx*dx + dz*dz)
+        LOG("  r2="..r2)
+        return (1.0 - taperCoef*r2)
+    
+    else
+        local r3 = math.sqrt(dx*dx + dy*dy + dz*dz)
+        LOG("  r3="..r3)
+        return (1.0 - taperCoef*r3)
+    end
+
+end
+
+
+function TADamageUnitsInArea(instigator, location, radius, damage, projectile, damageType, damageAllies, damageSelf, edgeEffectiveness)
 
     local rect = Rect(location[1]-radius, location[3]-radius, location[1]+radius, location[3]+radius)
     local units = GetUnitsInRect(rect) or {}
 
     for _, u in units do
-        local r = VDist3(u:GetPosition(), location)
-        if r > radius then continue end
+        local taper = CalcDamageTaper(location, u:GetPosition(), radius, edgeEffectiveness)
+        if taper < edgeEffectiveness then continue end
 
         local dmg1 = damage
         if projectile then
             dmg1 = projectile:AdjustDamageForTarget(u, damage)
         end
-        local dmg2 = dmg1 * (1.0 - taperCoef*r)
-        if dmg2 <= 0.0 then continue end
+        local dmg2 = dmg1 * taper
 
         army = instigator:GetArmy() or nil
         if instigator == u then
@@ -86,26 +103,27 @@ function TADamageUnitsInArea(instigator, location, radius, damage, projectile, d
                 instigator:OnDamage(instigator, dmg2, vector, damageType)
             end
         elseif damageAllies or not IsAlly(army, u:GetArmy()) then
-            bp = u:GetBlueprint()
-            --LOG("  TADamageUnitsInArea, dmg2="..dmg2..", UnitName="..repr(bp.General.UnitName)..", r="..r..", dmg1="..dmg1)
+            --bp = u:GetBlueprint()
+            --LOG("  TADamageUnitsInArea, dmg2="..dmg2..", UnitName="..repr(bp.General.UnitName)..", taper="..taper..", dmg1="..dmg1)
             Damage(instigator, location, u, dmg2, damageType)
         end
     end
 end
 
 
-function TADamageReclaimablesInArea(instigator, location, radius, damage, projectile, damageType, taperCoef)
+function TADamageReclaimablesInArea(instigator, location, radius, damage, projectile, damageType, edgeEffectiveness)
 
     local rect = Rect(location[1]-radius, location[3]-radius, location[1]+radius, location[3]+radius)
     local reclaimables = GetReclaimablesInRect(rect) or {}
 
     for _, reclaimable in reclaimables do
-        local r = VDist3(reclaimable:GetPosition(), location)
-        local dmg = damage * (1.0 - taperCoef*r)
+        local taper = CalcDamageTaper(location, reclaimable:GetPosition(), radius, edgeEffectiveness)
+        if taper < edgeEffectiveness then continue end
 
-        if IsProp(reclaimable) and r <= radius and dmg > 0.0 then
-            bp = reclaimable:GetBlueprint()
-            --LOG("  TADamageReclaimablesInArea, dmg="..dmg..", prop="..repr(bp.Interface.HelpText)..", r="..r)
+        local dmg = damage * taper
+        if IsProp(reclaimable) and dmg > 0.0 then
+            --bp = reclaimable:GetBlueprint()
+            --LOG("  TADamageReclaimablesInArea, dmg="..dmg..", prop="..repr(bp.Interface.HelpText)..", taper="..taper)
             Damage(instigator, location, reclaimable, dmg, damageType)
         end
     end
@@ -117,22 +135,21 @@ function TADamageEntity(instigator, location, targetEntity, damage, projectile, 
     if projectile then
         dmg = projectile:AdjustDamageForTarget(targetEntity, damage)
     end
-    --LOG("  TADamageEntity, dmg="..dmg)
+    bp = targetEntity:GetBlueprint()
+    LOG("  TADamageEntity, dmg="..dmg..", entity="..repr(bp.Interface.HelpText))
     Damage(instigator, location, targetEntity, dmg, damageType)
 end
 
 
 function DoTaperedAreaDamage(instigator, location, radius, damage, projectile, targetEntity, damageType, damageAllies, damageSelf, edgeEffectiveness)
-    --LOG("DoTaperedAreaDamage: radius="..repr(radius)..", damage="..repr(damage))
+    LOG("DoTaperedAreaDamage: radius="..repr(radius)..", damage="..repr(damage))
     if radius and radius > 0 then
-        local edge = edgeEffectiveness or 0.0
-        local taperCoef = (1.0-edge)/radius
 
         -- Get rid of trees
         DamageArea(instigator, location, radius, 1, 'Force', false, false)
         
-        TADamageUnitsInArea(instigator, location, radius, damage, projectile, damageType, damageAllies, damageSelf, taperCoef)
-        TADamageReclaimablesInArea(instigator, location, radius, damage, projectile, damageType, taperCoef)
+        TADamageUnitsInArea(instigator, location, radius, damage, projectile, damageType, damageAllies, damageSelf, edgeEffectiveness)
+        TADamageReclaimablesInArea(instigator, location, radius, damage, projectile, damageType, edgeEffectiveness)
 
     elseif damage and targetEntity then
         TADamageEntity(instigator, location, targetEntity, damage, projectile, damageType)
