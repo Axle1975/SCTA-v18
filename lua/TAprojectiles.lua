@@ -45,8 +45,6 @@ TAProjectile = Class(SinglePolyTrailProjectile) {
                 return self.WarriorDamage
             elseif self.PyroDamage and EntityCategoryContains(categories.CORPYRO, targetEntity) then
                 return self.PyroDamage
-            elseif self.MexDamageMultiplier and EntityCategoryContains(categories.MASSEXTRACTION, targetEntity) then
-                return self.MexDamageMultiplier * defaultDamage
             end
         end
         return defaultDamage

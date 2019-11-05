@@ -200,7 +200,7 @@ UnitBlueprint {
             BallisticArc = 'RULEUBA_None',
             CollideFriendly = false,
             DamageFriendly = true,
-            Damage = 150, 				
+            Damage = 150,
             BombDropThreshold = 3,		
             AlternateDamageRadius = 1.75,
             DamageType = 'Normal',
@@ -216,7 +216,7 @@ UnitBlueprint {
             Label = 'CORBOMB',
             MaxRadius = 32,
             MuzzleSalvoDelay = 0.2, -- OTA=0.18
-            MuzzleSalvoSize = 8,
+            MuzzleSalvoSize = 7,
             MuzzleVelocity = 0,	#16.875 - In Projectile
             ProjectileId = '/mods/SCTA/projectiles/CORBOMB/CORBOMB_proj.bp',
             RackBones = {

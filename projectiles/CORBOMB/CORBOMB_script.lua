@@ -6,7 +6,6 @@
 local TAMediumCannonProjectile = import('/mods/SCTA/lua/TAProjectiles.lua').TAMediumCannonProjectile
 
 CORBOMB = Class(TAMediumCannonProjectile) {
-    MexDamageMultiplier = 2,
 }
 
 TypeClass = CORBOMB
