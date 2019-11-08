@@ -113,6 +113,9 @@ TANuclearProjectile = Class(TAProjectile) {
     		'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
 	},
 	FxProjectileHitScale = 1.5,
+    
+    FxImpactTrajectoryAligned = false,
+
 }
 
 TAHeavyCannonProjectile = Class(TAProjectile) {
