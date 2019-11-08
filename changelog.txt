@@ -1,3 +1,7 @@
+v15
+- fix nuke explosion
+- replicate TA area damage more accurately
+
 v14
 - fix icon paths in factions.lua
 - adjust bomber release timing due to revert to OTA cruising alitude
