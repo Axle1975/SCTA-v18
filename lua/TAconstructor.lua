@@ -276,18 +276,19 @@ TAconstructor = Class(TAunit) {
 		local current = 0
 		while  self.isBuilding == true and IsDestroyed(unitBeingBuilt) == false and unitBeingBuilt:GetFractionComplete() < 1 or self.isReclaiming == true and self.currentState == "aimed" do
 			if self:IsPaused() == false then
-				local selfPosition = self:GetPosition(self:GetBlueprint().Display.BuildBones[1]) 
-				local targetPosition = unitBeingBuilt:GetPosition()
-				local distance = VDist3(Vector(selfPosition.x,selfPosition.y, selfPosition.z), Vector(targetPosition.x, targetPosition.y, targetPosition.z))
-				local time = distance * 0.85
-			
-				if (time >10) then
-					time = 10
-				end
 
 				current = current + 1
 				if current >= target or self.isReclaiming == true then
 					for k,v in self:GetBlueprint().Display.BuildBones do
+
+                        local selfPosition = self:GetPosition(v) 
+                        local targetPosition = unitBeingBuilt:GetPosition()
+                        local distance = VDist3(Vector(selfPosition.x,selfPosition.y, selfPosition.z), Vector(targetPosition.x, targetPosition.y, targetPosition.z))
+                        local time = distance * 0.85
+                        if (time >10) then
+                            time = 10
+                        end
+
 						local aiBrain = self:GetAIBrain()
 						local storedMass = aiBrain:GetEconomyStoredRatio('MASS')
 						local storedEnergy = aiBrain:GetEconomyStoredRatio('ENERGY')
@@ -299,6 +300,7 @@ TAconstructor = Class(TAunit) {
 						else
 							lowestRatio = ratioEnergy
 						end
+
 						local bp
 						if (self.isBuilding == true) then
 							bp = self:GetBlueprint().Display.BuildEmitter or 'nanolathe.bp'

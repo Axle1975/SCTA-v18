@@ -412,3 +412,100 @@ end
 function ArmyHasTargetingFacility(army)
     return (targetingFacilityData[army] > 0 and GetArmyBrain(army):GetEconomyStored('ENERGY') > 0)
 end
+
+
+function StringTokeniser (s,tok)
+
+    local line = s
+    local tokStart = nil
+    local tokEnd = 0
+    return function ()
+        while line do
+            local s, e = string.find(line, ";", tokEnd+1)
+            if s then
+                tokStart = tokEnd+1
+                tokEnd = s
+                return string.sub(line, tokStart, tokEnd-1)
+            else
+                tokStart = tokEnd+1
+                substr = string.sub(line, tokStart)
+                line = nil
+                return substr
+            end
+        end
+        return nil
+    end
+end
+
+
+function WordIterator(s)
+
+    local pos,_ = string.find(s,'%S',1)
+    return function()
+        while pos do
+            local nextPos,_ = string.find(s,'%s',pos)
+
+            if nextPos then
+                word = string.sub(s,pos,nextPos-1)
+                pos,_ = string.find(s,'%S',nextPos)
+            else
+                word = string.sub(s,pos)
+                pos = nil
+            end
+            return word
+        end
+        return nil
+    end
+
+end
+
+
+function Cobler(script, spinners, sliders)
+
+    local words
+    for line in StringTokeniser(script,';') do
+        words = { }
+        for word in WordIterator(line) do
+            table.insert(words,word)
+        end
+
+        if words[1] == "SLEEP" then
+            local seconds = tonumber(string.sub(words[2],2,-2)) / 1000.0
+            --LOG('SLEEP '..seconds)
+            WaitSeconds(seconds)
+
+        elseif words[1] == "TURN" then
+            local bone = words[2]
+            local axis = words[4]
+            local angle = tonumber(string.sub(words[5],2,-2))
+            local speed = tonumber(string.sub(words[7],2,-2))
+            local spinner = spinners[bone]
+            if spinner then
+                spinner:SetGoal(angle)
+                spinner:SetSpeed(speed)
+            else
+                LOG('invalid spinner for command: TURN '..bone..' '..angle..' '..speed)
+            end
+
+        elseif words[1] == "MOVE" then
+            local bone = words[2]
+            local axis = words[4]
+            local goal = tonumber(string.sub(words[5],2,-2))
+            local speed = tonumber(string.sub(words[7],2,-2))
+            local slider = sliders[bone]
+            if slider then
+                if axis == 'x-axis' then
+                    slider:SetGoal(goal, 0, 0)
+                elseif axis == 'y-axis' then
+                    slider:SetGoal(0, goal, 0)
+                elseif axis == 'z-axis' then
+                    slider:SetGoal(0, 0, goal)
+                end
+                slider:SetSpeed(speed)
+            else
+                LOG('invalid slider for command: MOVE '..bone..' '..axis..' '..goal..' '..speed)
+            end
+        end
+    end
+
+end

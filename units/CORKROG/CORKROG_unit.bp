@@ -30,28 +30,29 @@ UnitBlueprint {
     Categories = {
         'SELECTABLE',
         'TECH4',
-	'EXPERIMENTAL',
+        'EXPERIMENTAL',
         'VISIBLETORECON',
         'RECLAIMABLE',
 
-	--Additional Categories
+        --Additional Categories
         'MOBILE',
-	'LAND',
-	'DIRECTFIRE',
-	'ANTIAIR',
-	'TEXTUREANIM',
+        'LAND',
+        'DIRECTFIRE',
+        'ANTIAIR',
+        'TEXTUREANIM',
         'OVERLAYINDIRECTFIRE',
         'OVERLAYDIRECTFIRE',
-	'OVERLAYANTIAIR',
+        'OVERLAYANTIAIR',
+        'CORKROG',
 
-	--TA Categories
+        --TA Categories
         'CORE',
         'KBOT',
-	'LEVEL2',
-	'WEAPON',
-	'NOTAIR',
-	'NOTSUB',
-	'CTRL_W',
+        'LEVEL2',
+        'WEAPON',
+        'NOTAIR',
+        'NOTSUB',
+        'CTRL_W',
     },
     Defense = {
         ArmorType = 'Normal',
@@ -60,51 +61,51 @@ UnitBlueprint {
     },
     Description = 'Experimental Kbot',
     Display = {
-	TextureAnimationFrames = 8,
-	DestructionEffects = {
-		DestructionEmitters = {
-			{
-				EmitterBone = {'torso','head','hips','rleg','lleg'},
-				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
-				EmitterSize = 1.25,
-			},
-			{
-				EmitterBone = {'larm','rarm','lthigh','rthigh'},
-				EmitterBlueprint = {
-    					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
-			    		'/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
-    					'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
-				},
-				EmitterSize = 0.35,
-			},
-		},
-	},
+        TextureAnimationFrames = 8,
+        DestructionEffects = {
+            DestructionEmitters = {
+                {
+                    EmitterBone = {'torso','head','hips','rleg','lleg'},
+                    EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
+                    EmitterSize = 1.25,
+                },
+                {
+                    EmitterBone = {'larm','rarm','lthigh','rthigh'},
+                    EmitterBlueprint = {
+                            '/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
+                            '/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
+                            '/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
+                    },
+                    EmitterSize = 0.35,
+                },
+            },
+        },
         Mesh = {
             IconFadeInZoom = 130,
             LODs = {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
+                    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
-	SmokeBone = 'torso',
+        SmokeBone = 'torso',
         UniformScale = 0.16,
     },
     Economy = {
         BuildCostEnergy = 116664,
         BuildCostMass = 29489,
         BuildTime = 382193,
-	NaturalProducer = true,
+        NaturalProducer = true,
         MaintenanceConsumptionPerSecondEnergy = 1.1,
         ProductionPerSecondEnergy = 1.1,
     },
     Footprint = {
         SizeX = 3,
         SizeZ = 3,
-	MaxSlope = 1.0625,
-	MaxWaterDepth = 0.75,
+        MaxSlope = 1.0625,
+        MaxWaterDepth = 0.75,
     },
     General = {
         Category = 'Direct Fire',
@@ -133,8 +134,8 @@ UnitBlueprint {
     LifeBarSize = 2,
     Physics = {
         LayerChangeOffsetHeight = -2.00,
-	BackUpDistance = 0,
-	MaxSpeedReverse = 0,
+        BackUpDistance = 0,
+        MaxSpeedReverse = 0,
         MaxAcceleration = 3.24,
         MaxBrake = 6.84,
         MaxSpeed = 1.875,

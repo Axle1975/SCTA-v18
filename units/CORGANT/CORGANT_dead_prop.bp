@@ -38,7 +38,7 @@ PropBlueprint {
         BlockPath = true,
     },
     Wreckage = {
-	Blueprint = '/units/CORGANT/CORGANT_heap_prop.bp',
+	Blueprint = '/mods/SCTA/units/CORGANT/CORGANT_heap_prop.bp',
     },
     ScriptClass = 'TAWreckage',
     ScriptModule = '/mods/SCTA/lua/TAWreckage.lua',

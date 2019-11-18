@@ -33,23 +33,23 @@ UnitBlueprint {
         'DRAGBUILD',
         'VISIBLETORECON',
         'RECLAIMABLE',
-        'TECH2',
-	'FACTORY',
+        'TECH3',
+        'FACTORY',
         'RALLYPOINT',
         'SHOWQUEUE',
 
-	--Additional Categories
-	'STRUCTURE',
-	'CONSTRUCTION',
+        --Additional Categories
+        'STRUCTURE',
+        'CONSTRUCTION',
 
-	--TA Categories
-	'CORE',
-	'PLANT',
-	'LEVEL3',
-	'NOWEAPON',
-	'NOTAIR',
-	'NOTSUB',
-	'CTRL_F',
+        --TA Categories
+        'CORE',
+        'PLANT',
+        'LEVEL3',
+        'NOWEAPON',
+        'NOTAIR',
+        'NOTSUB',
+        'CTRL_F',
     },
     Defense = {
         ArmorType = 'Normal',
@@ -58,34 +58,34 @@ UnitBlueprint {
     },
     Description = 'Builds Krogoths',
     Display = {
-	DestructionEffects = {
-#		DefaultProjectileCategories = {'Construction','BuildMuzzle','BuildPlate', 'CorBld'},
-		DestructionEmitters = {
-			{
-				EmitterBone = {0, 'cranetop','clamp1','clamp2','clamp3','clamp4'},
-				EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
-				EmitterSize = 1.25,
-			},
-			{
-				EmitterBone = {'arm1a','arm2a','arm3a',arm4a},
-				EmitterBlueprint = {
-    					'/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
-			    		'/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
-    					'/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
-				},
-				EmitterSize = 0.35,
-			},
-		},
-	},
-	BuildBones = {'nano1','nano2'},
-	BuildAttachBone = 'pad',
+        DestructionEffects = {
+            DefaultProjectileCategories = {'Construction','BuildMuzzle','BuildPlate', 'CorBld'},
+            DestructionEmitters = {
+                {
+                    EmitterBone = {0, 'cranetop','clamp1','clamp2','clamp3','clamp4'},
+                    EmitterBlueprint = {'/mods/SCTA/effects/emitters/napalm_fire_emit.bp'},
+                    EmitterSize = 1.25,
+                },
+                {
+                    EmitterBone = {'arm1a','arm2a','arm3a','arm4a'},
+                    EmitterBlueprint = {
+                            '/mods/SCTA/effects/emitters/terran_missile_hit_01_emit.bp',
+                            '/mods/SCTA/effects/emitters/terran_missile_hit_03_emit.bp',
+                            '/mods/SCTA/effects/emitters/terran_missile_hit_04_emit.bp',
+                    },
+                    EmitterSize = 0.35,
+                },
+            },
+        },
+        BuildBones = {'nano1','nano2','nano3','nano4'},
+        BuildAttachBone = 'base',
         Mesh = {
             IconFadeInZoom = 130,
             LODs = {
                 {
                     LODCutoff = 500,
                     ShaderName = 'Unit',
-		    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
+                    NormalsName = '/mods/SCTA/textures/common/normalsTS.dds'
                 },
             },
         },
@@ -95,12 +95,12 @@ UnitBlueprint {
         BuildCostEnergy = 9574,
         BuildCostMass = 6587, 
         BuildTime = 41937,
-	BuildRate = 200,
+        BuildRate = 200,
         BuildableCategory = {
             'CORKROG',
         },
-	InitialRallyX = 0,
-	InitialRallyZ = 7.5,
+        InitialRallyX = 0,
+        InitialRallyZ = 7.5,
         StorageMass = 800,
         StorageEnergy = 1400,
     },
@@ -167,7 +167,7 @@ UnitBlueprint {
     SizeX = 9,
     SizeY = 2.5,
     SizeZ = 9,
-    StrategicIconName = 'icon_factory3_bot',
+    StrategicIconName = 'icon_factory3_land',
     StrategicIconSortPriority = 0,
     Weapon = {
         { #LARGE_BUILDINGEX
@@ -187,7 +187,7 @@ UnitBlueprint {
     },
     Wreckage = {
 	UseCustomMesh = true,
-        Blueprint = '/units/CORKROG/CORKROG_dead_prop.bp',
+        Blueprint = '/mods/SCTA/units/CORGANT/CORGANT_dead_prop.bp',
         WreckageLayers = {
             Land = true,
         },
