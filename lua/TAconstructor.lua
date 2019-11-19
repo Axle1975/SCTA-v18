@@ -157,7 +157,7 @@ TAconstructor = Class(TAunit) {
 
 
 	StopSpin = function(self, unitBeingBuilt)
-		if self.isFactory == true then
+		if self.isFactory == true and unitBeingBuilt then
 			unitBeingBuilt:DetachFrom(true)
 		end
 	end,
