@@ -528,9 +528,7 @@ CORGANT = Class(TAconstructor) {
 		TAconstructor.Open(self)
 	end,
 
-	Close = function(self)
-
-        script = [[
+    close_script = [[
 		MOVE gangplank to z-axis <2.25> SPEED <38.00>;
 		SLEEP <200>;
 		MOVE gangplank to z-axis <0> SPEED <11.00>;
@@ -646,10 +644,10 @@ CORGANT = Class(TAconstructor) {
 		TURN clamp2b to z-axis <0> SPEED <163.51>;
 		TURN clamp1b to z-axis <0> SPEED <154.72>;
 		SLEEP <200>;
-		SLEEP <200>; ]]
+		SLEEP <200>; ]],
 
-        TAutils.Cobler(script, self.Spinners, self.Sliders)
-
+	Close = function(self)
+        TAutils.Cobler(self.close_script, self.Spinners, self.Sliders)
 	end,
 }
 
