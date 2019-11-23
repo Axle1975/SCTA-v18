@@ -1,3 +1,8 @@
+v16
+- add unit: arm pelican
+- add unit: core morty
+- finish core gantry to enable building krogoths
+
 v15
 - fix nuke explosion
 - replicate TA area damage more accurately
