@@ -52,6 +52,7 @@ UnitBlueprint {
 	'NOTSUB',
 	'CTRL_F',
     },
+    CollisionOffsetY = -0.5,
     Defense = {
         ArmorType = 'Normal',
         Health = 2820,
