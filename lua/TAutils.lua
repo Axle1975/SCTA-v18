@@ -90,7 +90,7 @@ end
 
 function TADamageUnitsInArea(instigator, location, radius, damage, projectile, damageType, damageAllies, damageSelf, edgeEffectiveness)
 
-    local rect = Rect(location[1]-radius, location[3]-radius, location[1]+radius, location[3]+radius)
+    local rect = Rect(location[1]-radius-1, location[3]-radius-1, location[1]+radius+1, location[3]+radius+1)
     local units = GetUnitsInRect(rect) or {}
 
     for _, u in units do
