@@ -33,20 +33,20 @@ UnitBlueprint {
         'VISIBLETORECON',
         'RECLAIMABLE',
 
-	--Additional Categories
+        --Additional Categories
         'MOBILE',
-	'LAND',
-	'DIRECTFIRE',
+        'LAND',
+        'DIRECTFIRE',
         'OVERLAYDIRECTFIRE',
 
-	--TA Categories
+        --TA Categories
         'CORE',
         'KBOT',
-	'LEVEL1',
-	'WEAPON',
-	'NOTAIR',
-	'NOTSUB',
-	'CTRL_W',
+        'LEVEL2',
+        'WEAPON',
+        'NOTAIR',
+        'NOTSUB',
+        'CTRL_W',
     },
     Defense = {
         ArmorType = 'Normal',
