@@ -116,6 +116,12 @@ TAconstructor = Class(TAunit) {
 
 
 	OnStartBuild = function(self, unitBeingBuilt, order )
+
+        -- TA doesn't allow assist building nukes / anti-nukes.
+        if unitBeingBuilt:IsUnitState('SiloBuildingAmmo') and unitBeingBuilt:GetHealth()==unitBeingBuilt:GetMaxHealth() then
+            return
+        end
+
 		self:SetBuildRate(0)
 		self.desiredTarget = unitBeingBuilt
 		if (self.currentState == "aimed" or self.currentState == "opened" or self.currentState == "rolloff") then

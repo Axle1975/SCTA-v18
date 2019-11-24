@@ -51,6 +51,84 @@ TAunit = Class(Unit)
 		end
 	end,
 
+    -- override due to bug in unit.lua
+    UpdateConsumptionValues = function(self)
+        local energy_rate = 0
+        local mass_rate = 0
+
+        if self.ActiveConsumption then
+            local focus = self:GetFocusUnit()
+            local time = 1
+            local mass = 0
+            local energy = 0
+            local targetData
+            local baseData
+
+            if focus then -- Always inherit work status of focus
+                self:InheritWork(focus)
+            end
+
+            if self.WorkItem then -- Enhancement
+                targetData = self.WorkItem
+            elseif focus then -- Handling upgrades
+                if self:IsUnitState('Upgrading') then
+                    baseData = self:GetBlueprint().Economy -- Upgrading myself, subtract ev. baseCost
+                elseif focus.originalBuilder and not focus.originalBuilder.Dead and focus.originalBuilder:IsUnitState('Upgrading') and focus.originalBuilder:GetFocusUnit() == focus then
+                    baseData = focus.originalBuilder:GetBlueprint().Economy
+                end
+
+                if baseData then
+                    targetData = focus:GetBlueprint().Economy
+                end
+            end
+
+            if targetData then -- Upgrade/enhancement
+                time, energy, mass = Game.GetConstructEconomyModel(self, targetData, baseData)
+            elseif focus then -- Building/repairing something
+                -- bugfix here.  Need to prevent SiloProjectile stats being picked up when repairing a building nuker
+                -- if focus:IsUnitState('SiloBuildingAmmo') then
+                if focus:IsUnitState('SiloBuildingAmmo') and focus:GetHealth()==focus:GetMaxHealth() then
+                    -- For TAUnit, we'll never get here because TA doesn't allow assist of missiles
+                    local siloBuildRate = focus:GetBuildRate() or 1
+                    time, energy, mass = focus:GetBuildCosts(focus.SiloProjectile)
+                    local selfBuildRate = self:GetBuildRate() or 1
+                    energy = (energy / siloBuildRate) * (self:GetBuildRate() or 1)
+                    mass = (mass / siloBuildRate) * (self:GetBuildRate() or 1)
+                else
+                    time, energy, mass = self:GetBuildCosts(focus:GetBlueprint())
+                end
+            end
+
+            energy = math.max(1, energy * (self.EnergyBuildAdjMod or 1))
+            mass = math.max(1, mass * (self.MassBuildAdjMod or 1))
+            energy_rate = energy / time
+            mass_rate = mass / time
+        end
+
+        self:UpdateAssistersConsumption()
+
+        local myBlueprint = self:GetBlueprint()
+        if self.MaintenanceConsumption then
+            local mai_energy = (self.EnergyMaintenanceConsumptionOverride or myBlueprint.Economy.MaintenanceConsumptionPerSecondEnergy)  or 0
+            local mai_mass = myBlueprint.Economy.MaintenanceConsumptionPerSecondMass or 0
+
+            -- Apply economic bonuses
+            mai_energy = mai_energy * (100 + self.EnergyModifier) * (self.EnergyMaintAdjMod or 1) * 0.01
+            mai_mass = mai_mass * (100 + self.MassModifier) * (self.MassMaintAdjMod or 1) * 0.01
+
+            energy_rate = energy_rate + mai_energy
+            mass_rate = mass_rate + mai_mass
+        end
+
+         -- Apply minimum rates
+        energy_rate = math.max(energy_rate, myBlueprint.Economy.MinConsumptionPerSecondEnergy or 0)
+        mass_rate = math.max(mass_rate, myBlueprint.Economy.MinConsumptionPerSecondMass or 0)
+
+        self:SetConsumptionPerSecondEnergy(energy_rate)
+        self:SetConsumptionPerSecondMass(mass_rate)
+        self:SetConsumptionActive(energy_rate > 0 or mass_rate > 0)
+    end,
+
 
 	OnStopBeingBuilt = function(self,builder,layer)
 		Unit.OnStopBeingBuilt(self,builder,layer)
