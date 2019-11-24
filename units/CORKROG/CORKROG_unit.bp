@@ -48,7 +48,6 @@ UnitBlueprint {
         --TA Categories
         'CORE',
         'KBOT',
-        'LEVEL2',
         'WEAPON',
         'NOTAIR',
         'NOTSUB',
