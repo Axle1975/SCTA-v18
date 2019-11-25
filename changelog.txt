@@ -1,3 +1,10 @@
+v17
+- disable assist build nukes/antinukes as per original total annihilation
+- maybe fix for sometimes inability to damage a factory
+- fix some floating units inability to take damage from torps
+- move core morty to adv kbot lab build menus (was incorrectly in level kbot lab build menu)
+- remove krogoth from adv kbot lab build menu (should only be in gantry build menu)
+
 v16
 - add unit: arm pelican
 - add unit: core morty
