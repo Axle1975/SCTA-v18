@@ -3,15 +3,15 @@
 #
 #Script created by Raevn
 
-local TAunit = import('/mods/SCTA/lua/TAunit.lua').TAunit
+local TAnoassistbuild = import('/mods/SCTA/lua/TAnoassistbuild.lua').TAnoassistbuild
 local TAweapon = import('/mods/SCTA/lua/TAweapon.lua').TAweapon
 
-CORFMD = Class(TAunit) {
+CORFMD = Class(TAnoassistbuild) {
 	currentRound = 1,
 	PackTime = 0,
 
 	OnCreate = function(self)
-		TAunit.OnCreate(self)
+		TAnoassistbuild.OnCreate(self)
 		self.Sliders = {
 			dummy = CreateSlider(self, 'dummy'),
 			drawer = CreateSlider(self, 'drawer'),

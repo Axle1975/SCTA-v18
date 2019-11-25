@@ -3,13 +3,13 @@
 #
 #Script created by Raevn
 
-local TAunit = import('/mods/SCTA/lua/TAunit.lua').TAunit
+local TAnoassistbuild = import('/mods/SCTA/lua/TAnoassistbuild.lua').TAnoassistbuild
 local TAweapon = import('/mods/SCTA/lua/TAweapon.lua').TAweapon
 
-ARMSILO = Class(TAunit) {
+ARMSILO = Class(TAnoassistbuild) {
 	
 	OnCreate = function(self)
-		TAunit.OnCreate(self)
+		TAnoassistbuild.OnCreate(self)
 		self.Spinners = {
 			door1 = CreateRotator(self, 'Door_01', 'z', nil, 0, 0, 0),
 			door2 = CreateRotator(self, 'Door_02', 'z', nil, 0, 0, 0),
