@@ -165,6 +165,7 @@ UnitBlueprint {
             DisplayName = 'armamph_weapon1',
             FireTargetLayerCapsTable = {
                 Land = 'Land|Water|Air|Seabed',
+                Water = 'Land|Water|Air|Seabed',
             },
             RangeCategory = 'UWRC_DirectFire',
             FiringTolerance = 55,
@@ -228,6 +229,7 @@ UnitBlueprint {
             DisplayName = 'armamph_weapon2',
             FireTargetLayerCapsTable = {
                 Land = 'Land|Water|Air|Seabed',
+                Water = 'Land|Water|Air|Seabed',
             },
             RangeCategory = 'UWRC_DirectFire',
             FiringTolerance = 2.75,
