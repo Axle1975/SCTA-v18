@@ -36,6 +36,7 @@ UnitBlueprint {
 	--Additional Categories
         'MOBILE',
 	'DIRECTFIRE',
+        'LAND',
 
 	--TA Categories
         'ARM',

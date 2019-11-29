@@ -37,6 +37,7 @@ UnitBlueprint {
         'MOBILE',
 	'INDIRECTFIRE',
         'OVERLAYINDIRECTFIRE',
+        'LAND',
 
 	--TA Categories
         'ARM',

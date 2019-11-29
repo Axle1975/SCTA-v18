@@ -38,6 +38,7 @@ UnitBlueprint {
 	'ANTIAIR',
         'OVERLAYDIRECTFIRE',
 	'OVERLAYANTIAIR',
+        'LAND',
 
 	--TA Categories
         'ARM',
