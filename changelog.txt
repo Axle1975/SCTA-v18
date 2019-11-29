@@ -1,3 +1,7 @@
+v18
+- fix hover tank formations (ability to move multiple selected hovers)
+- fix pelican ability to shoot while on water
+
 v17
 - disable assist build nukes/antinukes as per original total annihilation
 - maybe fix for sometimes inability to damage a factory
