@@ -115,6 +115,7 @@ function TADamageUnitsInArea(instigator, location, radius, damage, projectile, d
             dmg1 = projectile:AdjustDamageForTarget(u, damage)
         end
         local dmg2 = dmg1 * taper
+        if dmg2 < 1.0 then continue end
 
         army = instigator:GetArmy() or nil
         if instigator == u then

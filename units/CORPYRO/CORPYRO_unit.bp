@@ -33,20 +33,21 @@ UnitBlueprint {
         'VISIBLETORECON',
         'RECLAIMABLE',
 
-	--Additional Categories
+        --Additional Categories
         'MOBILE',
-	'LAND',
-	'DIRECTFIRE',
+        'LAND',
+        'DIRECTFIRE',
         'OVERLAYDIRECTFIRE',
+        'CORPYRO',
 
-	--TA Categories
+        --TA Categories
         'CORE',
         'KBOT',
-	'LEVEL2',
-	'WEAPON',
-	'NOTAIR',
-	'NOTSUB',
-	'CTRL_W',
+        'LEVEL2',
+        'WEAPON',
+        'NOTAIR',
+        'NOTSUB',
+        'CTRL_W',
     },
     Defense = {
         ArmorType = 'Normal',
@@ -159,23 +160,23 @@ UnitBlueprint {
 --]]
             BallisticArc = 'RULEUBA_None',
             CollideFriendly = false,
-	    DamageFriendly = true,
-            Damage = 0, #damage is caused in script
-	    AlternateDamageRadius = 1,
+            DamageFriendly = true,
+            Damage = 10,
+            AlternateDamageRadius = 1,
             DamageType = 'Normal',
             DisplayName = 'FLAMETHROWER',
             FireTargetLayerCapsTable = {
                 Land = 'Land|Water|Seabed',
                 Seabed = 'Land|Water|Seabed',
             },
-	    RangeCategory = 'UWRC_DirectFire',
+            RangeCategory = 'UWRC_DirectFire',
             FiringTolerance = 0,
             FiringRandomness = 1, #Correct Value?
             Label = 'FLAMETHROWER',
             MaxRadius = 10,
             MuzzleSalvoDelay = 0.04,
             MuzzleSalvoSize = 17,
-	    MuzzleVelocity = 11.75,
+            MuzzleVelocity = 11.75,
             ProjectileId = '/mods/SCTA/projectiles/FLAMETHROWER/FLAMETHROWER_proj.bp',
             RackBones = {
                 {
